@@ -13,7 +13,6 @@ public class MainMenuController : MonoBehaviour
         Time.timeScale = 1;
         MainMenuPanel.SetActive(false);
         HUDPanel.SetActive(true);
-
     }
 
     public void Update()
