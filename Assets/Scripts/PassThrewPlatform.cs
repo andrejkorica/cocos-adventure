@@ -14,11 +14,10 @@ public class PassThrewPlatform : MonoBehaviour
 
     private void Update()
     {
-        if (_playerOnPlatform && Input.GetAxisRaw("Vertical") < 0)
+        if (_playerOnPlatform && Input.GetKey(KeyCode.S))
         {
-        
             _collider.enabled = false;
-            StartCoroutine(EnableCollider()); 
+            StartCoroutine(EnableCollider());
         }
     }
 
@@ -27,24 +26,29 @@ public class PassThrewPlatform : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         _collider.enabled = true;
     }
-    /*
-    private void SetPlayerOnPLatform(Collision2D other, bool value)
+
+    private void SetPlayerOnPlatform(bool value)
     {
-        var player = other.gameObject.GetComponent<Player>();
+        var player = GameObject.FindGameObjectWithTag("Player");
         if (player != null)
         {
-            _playerOnPlatform = value;
+            var cocoTransform = player.transform.Find("Coco");
+            var coco = cocoTransform.gameObject;
+            if (coco != null)
+            {
+                _playerOnPlatform = value;
+
+            }
         }
     }
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        SetPlayerOnPLatform(true); 
+        SetPlayerOnPlatform(true);
     }
 
     private void OnCollisionExit2D(Collision2D other)
     {
-        SetPlayerOnPLatform(false);
+        SetPlayerOnPlatform(false);
     }
-    */
 }
