@@ -51841,12 +51841,12 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1938077718}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 4c7aee1cfa2b5584db6287751125d55a, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.1
+  m_Volume: 1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -53790,9 +53790,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 188581c7d27321b4c9000e6469bb26ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BackgroundShiftAmount: 0.8
-  MiddlegroundShiftAmount: 0.7
-  ForegroundShiftAmount: 0.6
+  BackgroundShiftAmount: 0.1
+  MiddlegroundShiftAmount: 0.2
+  ForegroundShiftAmount: 0.3
   Camera: {fileID: 1358979829}
   Background: {fileID: 815018266}
   Middleground: {fileID: 1027467002}
