@@ -9,7 +9,7 @@ public class BackgroundController : MonoBehaviour
     public float MiddlegroundShiftAmount = 1f;
     public float ForegroundShiftAmount = 1f;
 
-    public GameObject Player;
+    public GameObject Camera;
     public GameObject Background;
     public GameObject Middleground;
     public GameObject Foreground;
@@ -18,7 +18,7 @@ public class BackgroundController : MonoBehaviour
 
     public void Start()
     {
-        BgCenter = Player.transform.position;
+        BgCenter = Background.transform.position;
     }
 
     void Update()
@@ -32,11 +32,11 @@ public class BackgroundController : MonoBehaviour
 
     public Vector3 GetUpdatedPosition(GameObject gameObject, float shiftAmount = 0)
     {
-        float extraChange = shiftAmount * (BgCenter.x - Player.transform.position.x);
+        float extraChange = shiftAmount * (BgCenter.x - Camera.transform.position.x);
 
         return new Vector3(
-            x: Player.transform.position.x + extraChange,
-            y: Player.transform.position.y,
+            x: Camera.transform.position.x + extraChange,
+            y: Camera.transform.position.y,
             z: gameObject.transform.position.z
         );
     }
