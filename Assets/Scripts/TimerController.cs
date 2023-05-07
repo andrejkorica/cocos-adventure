@@ -15,6 +15,6 @@ public class TimerController : MonoBehaviour
 
     private void AddSecond() {
         seconds++;
-        GetComponent<TextMeshProUGUI>().text = seconds.ToString();
+        gameObject.GetComponent<TextMeshProUGUI>().text = seconds.ToString();
     }
 }
