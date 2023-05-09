@@ -1,0 +1,97 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!74 &7400000
+AnimationClip:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: CocoSlowing
+  serializedVersion: 6
+  m_Legacy: 0
+  m_Compressed: 0
+  m_UseHighQualityCurve: 1
+  m_RotationCurves: []
+  m_CompressedRotationCurves: []
+  m_EulerCurves: []
+  m_PositionCurves: []
+  m_ScaleCurves: []
+  m_FloatCurves: []
+  m_PPtrCurves:
+  - curve:
+    - time: 0
+      value: {fileID: 1040779934, guid: 7beda7a447a9d61419e056a6446cb8ba, type: 3}
+    - time: 0.16666667
+      value: {fileID: 1040779934, guid: c4aea90d1c45c3e4cb2bd5b5733990a2, type: 3}
+    - time: 0.36666667
+      value: {fileID: 1040779934, guid: 069383e9cc54c674e880d54a51ca1c7e, type: 3}
+    - time: 0.53333336
+      value: {fileID: 1040779934, guid: 280cf799b627adc4eb9cebe137a9aeef, type: 3}
+    - time: 0.73333335
+      value: {fileID: 1040779934, guid: 5648f017b250ac84f9799f3352c39a4b, type: 3}
+    - time: 0.93333334
+      value: {fileID: 1040779934, guid: 00bf3269c2ebac640abc724eb47f4cd1, type: 3}
+    attribute: m_Sprite
+    path: 
+    classID: 212
+    script: {fileID: 0}
+  m_SampleRate: 60
+  m_WrapMode: 0
+  m_Bounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
+  m_ClipBindingConstant:
+    genericBindings:
+    - serializedVersion: 2
+      path: 0
+      attribute: 0
+      script: {fileID: 0}
+      typeID: 212
+      customType: 23
+      isPPtrCurve: 1
+    pptrCurveMapping:
+    - {fileID: 1040779934, guid: 7beda7a447a9d61419e056a6446cb8ba, type: 3}
+    - {fileID: 1040779934, guid: c4aea90d1c45c3e4cb2bd5b5733990a2, type: 3}
+    - {fileID: 1040779934, guid: 069383e9cc54c674e880d54a51ca1c7e, type: 3}
+    - {fileID: 1040779934, guid: 280cf799b627adc4eb9cebe137a9aeef, type: 3}
+    - {fileID: 1040779934, guid: 5648f017b250ac84f9799f3352c39a4b, type: 3}
+    - {fileID: 1040779934, guid: 00bf3269c2ebac640abc724eb47f4cd1, type: 3}
+  m_AnimationClipSettings:
+    serializedVersion: 2
+    m_AdditiveReferencePoseClip: {fileID: 0}
+    m_AdditiveReferencePoseTime: 0
+    m_StartTime: 0
+    m_StopTime: 0.95
+    m_OrientationOffsetY: 0
+    m_Level: 0
+    m_CycleOffset: 0
+    m_HasAdditiveReferencePose: 0
+    m_LoopTime: 1
+    m_LoopBlend: 0
+    m_LoopBlendOrientation: 0
+    m_LoopBlendPositionY: 0
+    m_LoopBlendPositionXZ: 0
+    m_KeepOriginalOrientation: 0
+    m_KeepOriginalPositionY: 1
+    m_KeepOriginalPositionXZ: 0
+    m_HeightFromFeet: 0
+    m_Mirror: 0
+  m_EditorCurves: []
+  m_EulerEditorCurves: []
+  m_HasGenericRootTransform: 0
+  m_HasMotionFloatCurves: 0
+  m_Events:
+  - time: 0.95
+    functionName: StopRunning
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.95
+    functionName: StopRunning
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
