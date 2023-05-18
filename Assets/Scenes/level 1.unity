@@ -1267,6 +1267,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: danger 3
       objectReference: {fileID: 0}
+    - target: {fileID: 9141853593499219092, guid: e884b4a6cd1c28a48a9116f8abc5dd9d, type: 3}
+      propertyPath: m_TagString
+      value: Spike
+      objectReference: {fileID: 0}
     - target: {fileID: 9141853593499219094, guid: e884b4a6cd1c28a48a9116f8abc5dd9d, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.size
       value: 19
@@ -1705,6 +1709,10 @@ PrefabInstance:
     - target: {fileID: 9141853593499219092, guid: e884b4a6cd1c28a48a9116f8abc5dd9d, type: 3}
       propertyPath: m_Name
       value: danger 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9141853593499219092, guid: e884b4a6cd1c28a48a9116f8abc5dd9d, type: 3}
+      propertyPath: m_TagString
+      value: Spike
       objectReference: {fileID: 0}
     - target: {fileID: 9141853593499219094, guid: e884b4a6cd1c28a48a9116f8abc5dd9d, type: 3}
       propertyPath: m_Offset.x
@@ -11965,6 +11973,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: danger 4
       objectReference: {fileID: 0}
+    - target: {fileID: 9141853593499219092, guid: e884b4a6cd1c28a48a9116f8abc5dd9d, type: 3}
+      propertyPath: m_TagString
+      value: Spike
+      objectReference: {fileID: 0}
     - target: {fileID: 9141853593499219094, guid: e884b4a6cd1c28a48a9116f8abc5dd9d, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.size
       value: 24
@@ -12476,6 +12488,7 @@ GameObject:
   - component: {fileID: 951986023}
   - component: {fileID: 951986024}
   - component: {fileID: 951986025}
+  - component: {fileID: 951986026}
   m_Layer: 0
   m_Name: Coco
   m_TagString: Untagged
@@ -12661,6 +12674,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2a611c81b787bc4786785bf7bf98682, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &951986026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 951986016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cf3d1dddac91ca4b979ebe2fc0e0d33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 3
+  invulnerabilityDuration: 5
+  spawnPoint: {fileID: 1765163259}
 --- !u!1 &1019053178
 GameObject:
   m_ObjectHideFlags: 0
@@ -13200,6 +13228,10 @@ PrefabInstance:
     - target: {fileID: 9141853593499219092, guid: e884b4a6cd1c28a48a9116f8abc5dd9d, type: 3}
       propertyPath: m_Name
       value: danger 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 9141853593499219092, guid: e884b4a6cd1c28a48a9116f8abc5dd9d, type: 3}
+      propertyPath: m_TagString
+      value: Spike
       objectReference: {fileID: 0}
     - target: {fileID: 9141853593499219094, guid: e884b4a6cd1c28a48a9116f8abc5dd9d, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.size
@@ -18283,6 +18315,10 @@ PrefabInstance:
     - target: {fileID: 9141853593499219092, guid: e884b4a6cd1c28a48a9116f8abc5dd9d, type: 3}
       propertyPath: m_Name
       value: danger 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9141853593499219092, guid: e884b4a6cd1c28a48a9116f8abc5dd9d, type: 3}
+      propertyPath: m_TagString
+      value: Spike
       objectReference: {fileID: 0}
     - target: {fileID: 9141853593499219094, guid: e884b4a6cd1c28a48a9116f8abc5dd9d, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.size
@@ -23604,6 +23640,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 951986017}
+  - {fileID: 1765163259}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -23775,6 +23812,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: danger 6
       objectReference: {fileID: 0}
+    - target: {fileID: 9141853593499219092, guid: e884b4a6cd1c28a48a9116f8abc5dd9d, type: 3}
+      propertyPath: m_TagString
+      value: Spike
+      objectReference: {fileID: 0}
     - target: {fileID: 9141853593499219094, guid: e884b4a6cd1c28a48a9116f8abc5dd9d, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.size
       value: 9
@@ -23897,6 +23938,107 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e884b4a6cd1c28a48a9116f8abc5dd9d, type: 3}
+--- !u!1 &1542786063
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1542786067}
+  - component: {fileID: 1542786066}
+  - component: {fileID: 1542786064}
+  m_Layer: 0
+  m_Name: Health
+  m_TagString: HealthPickup
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!58 &1542786064
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1542786063}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
+--- !u!212 &1542786066
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1542786063}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 260
+  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &1542786067
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1542786063}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 68.31, y: -4.66, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1561893527
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23907,6 +24049,10 @@ PrefabInstance:
     - target: {fileID: 9141853593499219092, guid: e884b4a6cd1c28a48a9116f8abc5dd9d, type: 3}
       propertyPath: m_Name
       value: danger 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9141853593499219092, guid: e884b4a6cd1c28a48a9116f8abc5dd9d, type: 3}
+      propertyPath: m_TagString
+      value: Spike
       objectReference: {fileID: 0}
     - target: {fileID: 9141853593499219095, guid: e884b4a6cd1c28a48a9116f8abc5dd9d, type: 3}
       propertyPath: m_RootOrder
@@ -28887,6 +29033,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1747057552}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1765163258
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1765163259}
+  m_Layer: 0
+  m_Name: Spawn Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1765163259
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1765163258}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 68.63, y: -16.88, z: -0.047284786}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1430605208}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1808765063
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28897,6 +29074,10 @@ PrefabInstance:
     - target: {fileID: 9141853593499219092, guid: e884b4a6cd1c28a48a9116f8abc5dd9d, type: 3}
       propertyPath: m_Name
       value: danger 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 9141853593499219092, guid: e884b4a6cd1c28a48a9116f8abc5dd9d, type: 3}
+      propertyPath: m_TagString
+      value: Spike
       objectReference: {fileID: 0}
     - target: {fileID: 9141853593499219094, guid: e884b4a6cd1c28a48a9116f8abc5dd9d, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.size
