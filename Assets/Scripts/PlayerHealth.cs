@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using System.Collections;
 
 public class PlayerHealth : MonoBehaviour
@@ -8,6 +9,10 @@ public class PlayerHealth : MonoBehaviour
     public float invulnerabilityDuration = 5f;  
     public Transform spawnPoint;  
 
+    public Image HeartImage1; 
+    public Image HeartImage2;  
+    public Image HeartImage3;
+
     private int currentHealth;  
     private bool isInvulnerable;  
 
@@ -15,7 +20,8 @@ public class PlayerHealth : MonoBehaviour
 
     private void Start()
     {
-        currentHealth = previousHealth > 0 ? previousHealth : maxHealth;  
+        currentHealth = previousHealth > 0 ? previousHealth : maxHealth;
+        UpdateHeartImages();  
     }
 
     private void Update()
@@ -29,7 +35,8 @@ public class PlayerHealth : MonoBehaviour
             if ( collider.CompareTag("Spike"))  // || collider.CompareTag("Enemy") 
             {
                 TakeDamage();
-                Debug.Log("Trenutni broj života: " + currentHealth);
+                //Debug.Log("Trenutni broj života: " + currentHealth);
+                UpdateHeartImages();
                 break;
             }
         }
@@ -62,7 +69,9 @@ public class PlayerHealth : MonoBehaviour
         previousHealth = currentHealth;  // Spremi trenutni broj zivota za sljedeci level
         currentHealth = maxHealth;
 
-        Debug.Log("Trenutni broj zivota: " + currentHealth);
+        UpdateHeartImages();
+
+        //Debug.Log("Trenutni broj zivota: " + currentHealth);
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
@@ -74,7 +83,36 @@ public class PlayerHealth : MonoBehaviour
             currentHealth++;
             Destroy(collision.gameObject);
 
-            Debug.Log("Trenutni broj života: " + currentHealth);
+            //Debug.Log("Trenutni broj života: " + currentHealth);
+            UpdateHeartImages(); 
         }
+    }
+
+    private void UpdateHeartImages()
+    {
+
+    switch (currentHealth)
+    {
+        case 3:
+            HeartImage1.enabled = true;
+            HeartImage2.enabled = true;
+            HeartImage3.enabled = true;
+            break;
+        case 2:
+            HeartImage1.enabled = true;
+            HeartImage2.enabled = true;
+            HeartImage3.enabled = false;
+            break;
+        case 1:
+            HeartImage1.enabled = true;
+            HeartImage2.enabled = false;
+            HeartImage3.enabled = false;
+            break;
+        case 0:
+            HeartImage1.enabled = false;
+            HeartImage2.enabled = false;
+            HeartImage3.enabled = false;
+            break;
+    }
     }
 }
