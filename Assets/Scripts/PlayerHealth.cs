@@ -20,22 +20,23 @@ public class PlayerHealth : MonoBehaviour
 
     private void Start()
     {
-        currentHealth = previousHealth > 0 ? previousHealth : maxHealth;
+        currentHealth = maxHealth;
         UpdateHeartImages();  
     }
 
     private void Update()
     {
-        if (isInvulnerable)
+        if (isInvulnerable) {
             return;
+        }
 
         Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, 0.5f);
         foreach (Collider2D collider in colliders)
         {
-            if ( collider.CompareTag("Spike"))  // || collider.CompareTag("Enemy") 
+            if (collider.CompareTag("Spike"))  // || collider.CompareTag("Enemy") 
             {
                 TakeDamage();
-                //Debug.Log("Trenutni broj života: " + currentHealth);
+                // Debug.Log("Trenutni broj života: " + currentHealth);
                 UpdateHeartImages();
                 break;
             }
@@ -69,7 +70,7 @@ public class PlayerHealth : MonoBehaviour
         previousHealth = currentHealth;  // Spremi trenutni broj zivota za sljedeci level
         currentHealth = maxHealth;
 
-        UpdateHeartImages();
+        // UpdateHeartImages();
 
         //Debug.Log("Trenutni broj zivota: " + currentHealth);
 
@@ -90,29 +91,15 @@ public class PlayerHealth : MonoBehaviour
 
     private void UpdateHeartImages()
     {
+        // TODO staviti u private polje da se moze spremiti konzerva
+        Image[] images = { 
+            HeartImage1,
+            HeartImage2,
+            HeartImage3,
+        };
 
-    switch (currentHealth)
-    {
-        case 3:
-            HeartImage1.enabled = true;
-            HeartImage2.enabled = true;
-            HeartImage3.enabled = true;
-            break;
-        case 2:
-            HeartImage1.enabled = true;
-            HeartImage2.enabled = true;
-            HeartImage3.enabled = false;
-            break;
-        case 1:
-            HeartImage1.enabled = true;
-            HeartImage2.enabled = false;
-            HeartImage3.enabled = false;
-            break;
-        case 0:
-            HeartImage1.enabled = false;
-            HeartImage2.enabled = false;
-            HeartImage3.enabled = false;
-            break;
-    }
+        for (int i = 0; i < images.Length; i++) {
+            images[i].enabled = i < currentHealth;
+        }
     }
 }
