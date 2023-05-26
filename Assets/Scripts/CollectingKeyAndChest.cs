@@ -1,8 +1,9 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CollectingKeyAndChest : MonoBehaviour
 {
-    private bool hasKey = false; 
+    private bool hasKey = true; 
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -16,13 +17,23 @@ public class CollectingKeyAndChest : MonoBehaviour
         {
             if (hasKey)
             {
-                Debug.Log("Moving to next level!");
-                // implementacija koda koji vodi na sljedeci level
+                goToNextLevel();
             }
             else
             {
                 Debug.Log("You need to pick up the key first!");
             }
         }
+    }
+
+    private void goToNextLevel() {
+        // TODO Save
+        // TODO Animation
+        var dataStorage = DataPersistenceManager.instance;
+        dataStorage.SaveGame();
+
+        dataStorage.LoadGame();
+        // int buildIndex = SceneManager.GetActiveScene().buildIndex;
+        // SceneManager.LoadScene(buildIndex + 1);
     }
 }
