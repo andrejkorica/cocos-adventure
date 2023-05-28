@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class CollectingKeyAndChest : MonoBehaviour
 {
-    private bool hasKey = true; 
+    private bool hasKey = false; 
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

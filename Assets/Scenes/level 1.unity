@@ -1466,7 +1466,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &535817665
 Transform:
   m_ObjectHideFlags: 0
@@ -20199,6 +20199,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4077596921928781495, guid: b7b627207b60845418dffdab25f6971c, type: 3}
+      propertyPath: m_Name
+      value: Star Counter
+      objectReference: {fileID: 0}
     - target: {fileID: 5858119915809031769, guid: b7b627207b60845418dffdab25f6971c, type: 3}
       propertyPath: m_Name
       value: Level GUI Canvas
@@ -54686,7 +54690,7 @@ AudioSource:
   m_Volume: 1
   m_Pitch: 1
   Loop: 1
-  Mute: 1
+  Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 125
@@ -56811,7 +56815,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2145815995
 Transform:
   m_ObjectHideFlags: 0
@@ -57172,6 +57176,10 @@ PrefabInstance:
     - target: {fileID: 5040407664247567479, guid: c844b0e1d8ade6e44ae83ae5fe1b2a54, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8925580243481924118, guid: c844b0e1d8ade6e44ae83ae5fe1b2a54, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c844b0e1d8ade6e44ae83ae5fe1b2a54, type: 3}
