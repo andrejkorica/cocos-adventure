@@ -31,9 +31,8 @@ public class CollectingKeyAndChest : MonoBehaviour
         // TODO Animation
         var dataStorage = DataPersistenceManager.instance;
         dataStorage.SaveGame();
-
-        dataStorage.LoadGame();
-        // int buildIndex = SceneManager.GetActiveScene().buildIndex;
-        // SceneManager.LoadScene(buildIndex + 1);
+        
+        int buildIndex = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(buildIndex + 1);
     }
 }

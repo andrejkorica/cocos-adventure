@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class DataPersistenceManager : MonoBehaviour
 {
-    private string fileName = "abc";
+    private string fileName = "data";
     private int currentIndex;
     private GameData gameData;
     private List<IDataPersistence> dataPersistenceObjects;
@@ -52,15 +52,10 @@ public class DataPersistenceManager : MonoBehaviour
     public void LoadGame()
     {
         this.gameData = dataHandler.Load(this.currentIndex);
+        CoinCounter.instance.SetCoins(gameData.collectedCoins.Count(c => c));
         if (this.gameData == null) 
         {
             NewGame();
-        }
-
-        if (this.gameData == null) 
-        {
-            Debug.Log("No data was found. A New Game needs to be started before data can be loaded.");
-            return;
         }
 
         foreach (IDataPersistence dataPersistenceObj in dataPersistenceObjects) 

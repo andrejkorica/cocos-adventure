@@ -55,5 +55,6 @@ public class CharacterController2D : MonoBehaviour
     {
         float JumpForce = 700f;
         rb.AddForce(new Vector2(0f, JumpForce));
+        
     }
 }
