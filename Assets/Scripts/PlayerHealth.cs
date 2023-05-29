@@ -33,7 +33,7 @@ public class PlayerHealth : MonoBehaviour
         Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, 0.5f);
         foreach (Collider2D collider in colliders)
         {
-            if (collider.CompareTag("Spike"))  // || collider.CompareTag("Enemy") 
+            if (collider.CompareTag("Spike") || collider.CompareTag("Enemy"))
             {
                 TakeDamage();
                 // Debug.Log("Trenutni broj života: " + currentHealth);
