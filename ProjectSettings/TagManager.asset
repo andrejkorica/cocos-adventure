@@ -9,6 +9,7 @@ TagManager:
   - Chest
   - Spike
   - HealthPickup
+  - Enemy
   layers:
   - Default
   - TransparentFX

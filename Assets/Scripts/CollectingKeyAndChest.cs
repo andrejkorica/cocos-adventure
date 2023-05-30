@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CollectingKeyAndChest : MonoBehaviour
 {
@@ -16,13 +17,22 @@ public class CollectingKeyAndChest : MonoBehaviour
         {
             if (hasKey)
             {
-                Debug.Log("Moving to next level!");
-                // implementacija koda koji vodi na sljedeci level
+                goToNextLevel();
             }
             else
             {
                 Debug.Log("You need to pick up the key first!");
             }
         }
+    }
+
+    private void goToNextLevel() {
+        // TODO Save
+        // TODO Animation
+        var dataStorage = DataPersistenceManager.instance;
+        dataStorage.SaveGame();
+        
+        int buildIndex = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(buildIndex + 1);
     }
 }

@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using System.Collections;
 
 public class PlayerHealth : MonoBehaviour
@@ -8,6 +9,10 @@ public class PlayerHealth : MonoBehaviour
     public float invulnerabilityDuration = 5f;  
     public Transform spawnPoint;  
 
+    public Image HeartImage1; 
+    public Image HeartImage2;  
+    public Image HeartImage3;
+
     private int currentHealth;  
     private bool isInvulnerable;  
 
@@ -15,21 +20,24 @@ public class PlayerHealth : MonoBehaviour
 
     private void Start()
     {
-        currentHealth = previousHealth > 0 ? previousHealth : maxHealth;  
+        currentHealth = maxHealth;
+        UpdateHeartImages();  
     }
 
     private void Update()
     {
-        if (isInvulnerable)
+        if (isInvulnerable) {
             return;
+        }
 
         Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, 0.5f);
         foreach (Collider2D collider in colliders)
         {
-            if ( collider.CompareTag("Spike"))  // || collider.CompareTag("Enemy") 
+            if (collider.CompareTag("Spike") || collider.CompareTag("Enemy"))
             {
                 TakeDamage();
-                Debug.Log("Trenutni broj života: " + currentHealth);
+                // Debug.Log("Trenutni broj života: " + currentHealth);
+                UpdateHeartImages();
                 break;
             }
         }
@@ -62,7 +70,9 @@ public class PlayerHealth : MonoBehaviour
         previousHealth = currentHealth;  // Spremi trenutni broj zivota za sljedeci level
         currentHealth = maxHealth;
 
-        Debug.Log("Trenutni broj zivota: " + currentHealth);
+        // UpdateHeartImages();
+
+        //Debug.Log("Trenutni broj zivota: " + currentHealth);
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
@@ -74,7 +84,22 @@ public class PlayerHealth : MonoBehaviour
             currentHealth++;
             Destroy(collision.gameObject);
 
-            Debug.Log("Trenutni broj života: " + currentHealth);
+            //Debug.Log("Trenutni broj života: " + currentHealth);
+            UpdateHeartImages(); 
+        }
+    }
+
+    private void UpdateHeartImages()
+    {
+        // TODO staviti u private polje da se moze spremiti konzerva
+        Image[] images = { 
+            HeartImage1,
+            HeartImage2,
+            HeartImage3,
+        };
+
+        for (int i = 0; i < images.Length; i++) {
+            images[i].enabled = i < currentHealth;
         }
     }
 }
