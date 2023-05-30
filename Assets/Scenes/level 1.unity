@@ -1236,35 +1236,9 @@ SpriteRenderer:
   m_SpriteSortPoint: 0
 --- !u!4 &400272980
 Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 4244284971379442301, guid: 8fc4a88fb27becd4786422bee7973c65, type: 3}
+  m_PrefabInstance: {fileID: 4244284971088505897}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 400272978}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.91, y: -11.85, z: -0.3076537}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1315779640}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &400272981
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 400272978}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.00000047683716}
-  serializedVersion: 2
-  m_Radius: 0.296875
 --- !u!4 &422835712 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9141853593499219095, guid: e884b4a6cd1c28a48a9116f8abc5dd9d, type: 3}
@@ -1500,7 +1474,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1019053180}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!483693784 &518661075
 TilemapRenderer:
@@ -14261,8 +14235,8 @@ Transform:
   m_Children:
   - {fileID: 139995666}
   - {fileID: 1841278426}
-  - {fileID: 518661074}
   - {fileID: 1951796010}
+  - {fileID: 518661074}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -19962,45 +19936,9 @@ SpriteRenderer:
   m_SpriteSortPoint: 0
 --- !u!4 &1215807407
 Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 7622164293239995510, guid: 01a969dc5a60fd04f8788a97094a5c6c, type: 3}
+  m_PrefabInstance: {fileID: 7622164292033037273}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1215807405}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 37.17, y: -6.42, z: -0.3076537}
-  m_LocalScale: {x: 1.35795, y: 1.3708501, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1315779640}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &1215807408
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1215807405}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!1001 &1220760711
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -54940,7 +54878,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1019053180}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!19719996 &1951796011
 TilemapCollider2D:
@@ -56911,9 +56849,8 @@ GameObject:
   m_IsActive: 1
 --- !u!4 &2069834964
 Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 1205411217794637908, guid: f16e4f2f959f8c54198c835ad26a3d86, type: 3}
+  m_PrefabInstance: {fileID: 1205411218244013184}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2069834962}
   m_LocalRotation: {x: -0, y: -0, z: 0.9060435, w: 0.42318457}
