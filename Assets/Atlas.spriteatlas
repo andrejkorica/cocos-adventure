@@ -126,6 +126,8 @@ SpriteAtlas:
   - {fileID: 908507500, guid: bc5554988ebd6e544867850ec25b70d5, type: 3}
   - {fileID: -1986224794, guid: bc5554988ebd6e544867850ec25b70d5, type: 3}
   - {fileID: -208966722, guid: bc5554988ebd6e544867850ec25b70d5, type: 3}
+  - {fileID: 1599495034, guid: e8e9b0d8abd17d14793047aacb051481, type: 3}
+  - {fileID: 1040779934, guid: e8e9b0d8abd17d14793047aacb051481, type: 3}
   - {fileID: 921163114, guid: f526d62caf960f241a73a9d552d6ee8d, type: 3}
   - {fileID: 200894748, guid: f526d62caf960f241a73a9d552d6ee8d, type: 3}
   - {fileID: -1367713293, guid: f526d62caf960f241a73a9d552d6ee8d, type: 3}
@@ -221,6 +223,8 @@ SpriteAtlas:
   - bottomSpikes_3
   - bottomSpikes_0
   - bottomSpikes_1
+  - chest_1
+  - chest_0
   - SpikesWallRight_5
   - SpikesWallRight_4
   - SpikesWallRight_1

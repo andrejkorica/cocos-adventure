@@ -43,6 +43,15 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 3109628135
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Bubble column
+    uniqueID: 3696164777
+    locked: 0
+  - name: Foreground
+    uniqueID: 1751325965
     locked: 0
