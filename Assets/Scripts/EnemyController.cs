@@ -10,28 +10,43 @@ public class EnemyController : MonoBehaviour
     [SerializeField]
     private GameObject[] positions;
 
-    public int index;
-    public Vector3 localposition;
-    public Vector3 globalposition;
+    private int index;
+    private Vector3 localPosition;
+    private Vector3 globalPosition;
+    private bool facingRight = true;
+    private SpriteRenderer spriteRenderer;
 
-    void Update()
+    private void Awake()
     {
-        localposition = transform.localPosition;
-        globalposition = transform.position;
+        spriteRenderer = GetComponent<SpriteRenderer>();
+    }
+
+    private void Update()
+    {
+        localPosition = transform.localPosition;
+        globalPosition = transform.position;
         transform.position = Vector2.MoveTowards(transform.position, positions[index].transform.position, Time.deltaTime * speed);
 
-        Vector3 Pos1 = new(transform.position.x, transform.position.y, 0);
+        Vector3 pos1 = new Vector3(positions[index].transform.position.x, positions[index].transform.position.y, 0);
 
-        if(Vector2.Distance(Pos1, positions[index].transform.position) < 0.1f)
+        if (Vector2.Distance(transform.position, pos1) < 0.1f)
         {
-            if (index == positions.Length -1)
+            if (index == positions.Length - 1)
             {
                 index = 0;
             }
             else
             {
-                index ++;
+                index++;
             }
+
+            Flip();
         }
+    }
+
+    private void Flip()
+    {
+        facingRight = !facingRight;
+        spriteRenderer.flipX = !spriteRenderer.flipX;
     }
 }
