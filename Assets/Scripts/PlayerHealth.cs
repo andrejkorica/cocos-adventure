@@ -3,9 +3,9 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System.Collections;
 
-public class PlayerHealth : MonoBehaviour
+public class PlayerHealth : MonoBehaviour, IGlobalDataPersistance
 {
-    public int maxHealth = 3;  
+    public int maxHealth;  
     public float invulnerabilityDuration = 5f;  
     public Transform spawnPoint;  
 
@@ -35,6 +35,7 @@ public class PlayerHealth : MonoBehaviour
         {
             if (collider.CompareTag("Spike") || collider.CompareTag("Enemy"))
             {
+                Debug.Log(maxHealth);
                 TakeDamage();
                 // Debug.Log("Trenutni broj života: " + currentHealth);
                 UpdateHeartImages();
@@ -101,5 +102,13 @@ public class PlayerHealth : MonoBehaviour
         for (int i = 0; i < images.Length; i++) {
             images[i].enabled = i < currentHealth;
         }
+    }
+
+    public void LoadData(AttributesData data) {
+        maxHealth = data.maxHealth;
+    }
+
+    public void SaveData(AttributesData data) {
+        data.maxHealth = maxHealth;
     }
 }

@@ -9,7 +9,9 @@ public class DataPersistenceManager : MonoBehaviour
     private string fileName = "data";
     private int currentIndex;
     private GameData gameData;
+    private AttributesData globalData;
     private List<IDataPersistence> dataPersistenceObjects;
+    private IGlobalDataPersistance globalDataPersistenceObject;
     private FileDataHandler dataHandler;
 
     public static DataPersistenceManager instance { get; private set; }
@@ -41,12 +43,9 @@ public class DataPersistenceManager : MonoBehaviour
     public void OnSceneLoaded(Scene scene, LoadSceneMode mode) 
     {
         this.dataPersistenceObjects = FindAllDataPersistenceObjects();
-        LoadGame();
-    }
+        this.globalDataPersistenceObject = FindObjectsOfType<MonoBehaviour>(true).OfType<IGlobalDataPersistance>().First();
 
-    public void NewGame() 
-    {
-        this.gameData = new GameData();
+        LoadGame();
     }
 
     public void LoadGame()
@@ -55,13 +54,19 @@ public class DataPersistenceManager : MonoBehaviour
         CoinCounter.instance.SetCoins(gameData.collectedCoins.Count(c => c));
         if (this.gameData == null) 
         {
-            NewGame();
+            this.gameData = new GameData();
+        }
+
+        if (this.globalData == null) 
+        {
+            this.globalData = new AttributesData();
         }
 
         foreach (IDataPersistence dataPersistenceObj in dataPersistenceObjects) 
         {
             dataPersistenceObj.LoadData(gameData);
         }
+        globalDataPersistenceObject.LoadData(globalData);
     }
 
     public void SaveGame()
@@ -76,8 +81,10 @@ public class DataPersistenceManager : MonoBehaviour
         {
             dataPersistenceObj.SaveData(gameData);
         }
+        globalDataPersistenceObject.SaveData(globalData);
 
         dataHandler.Save(gameData, this.currentIndex);
+        dataHandler.SaveGlobalData(globalData);
     }
 
     private List<IDataPersistence> FindAllDataPersistenceObjects() 

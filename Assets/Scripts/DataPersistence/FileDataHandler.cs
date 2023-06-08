@@ -7,6 +7,7 @@ using System.IO;
 public class FileDataHandler
 {
     private string dataDirPath = "";
+    private string globalDirName = "global";
     private string dataFileName = "";
 
     public FileDataHandler(string dataDirPath, string dataFileName) 
@@ -36,11 +37,47 @@ public class FileDataHandler
 
         return JsonUtility.FromJson<GameData>(dataToLoad);    
     }
+    public AttributesData LoadGlobablData(int index) 
+    {
+        // Use Path.Combine to account for different OS's having different path separators
+        string fullPath = Path.Combine(dataDirPath, globalDirName, dataFileName);
+        Debug.Log(fullPath);
+        if (!File.Exists(fullPath)) 
+        {
+            return new AttributesData();
+        }
+
+        string dataToLoad = "";
+        using (FileStream stream = new FileStream(fullPath, FileMode.Open))
+        {
+            using (StreamReader reader = new StreamReader(stream))
+            {
+                dataToLoad = reader.ReadToEnd();
+            }
+        }
+
+        return JsonUtility.FromJson<AttributesData>(dataToLoad);    
+    }
 
     public void Save(GameData data, int index) 
     {
         // Use Path.Combine to account for different OS's having different path separators
         string fullPath = Path.Combine(dataDirPath, index.ToString(), dataFileName);
+        string dataToStore = JsonUtility.ToJson(data, true);
+        Directory.CreateDirectory(Path.GetDirectoryName(fullPath));
+        
+        using (FileStream stream = new FileStream(fullPath, FileMode.Create))
+        {
+            using (StreamWriter writer = new StreamWriter(stream)) 
+            {
+                writer.Write(dataToStore);
+            }
+        }
+    }
+    public void SaveGlobalData(AttributesData data) 
+    {
+        // Use Path.Combine to account for different OS's having different path separators
+        string fullPath = Path.Combine(dataDirPath, globalDirName, dataFileName);
         string dataToStore = JsonUtility.ToJson(data, true);
         Directory.CreateDirectory(Path.GetDirectoryName(fullPath));
         
