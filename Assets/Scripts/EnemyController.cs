@@ -10,10 +10,10 @@ public class EnemyController : MonoBehaviour
     [SerializeField]
     private GameObject[] positions;
 
+    [SerializeField]
+    private int[] flipIndexes;
 
     private int index;
-    private Vector3 localPosition;
-    private Vector3 globalPosition;
     private bool facingRight = true;
     private SpriteRenderer spriteRenderer;
 
@@ -24,8 +24,6 @@ public class EnemyController : MonoBehaviour
 
     private void Update()
     {
-        localPosition = transform.localPosition;
-        globalPosition = transform.position;
         transform.position = Vector2.MoveTowards(transform.position, positions[index].transform.position, Time.deltaTime * speed);
 
         Vector3 pos1 = new Vector3(positions[index].transform.position.x, positions[index].transform.position.y, 0);
@@ -41,6 +39,14 @@ public class EnemyController : MonoBehaviour
                 index++;
             }
 
+            FlipIfNeeded();
+        }
+    }
+
+    private void FlipIfNeeded()
+    {
+        if (ArrayContainsValue(flipIndexes, index))
+        {
             Flip();
         }
     }
@@ -49,5 +55,17 @@ public class EnemyController : MonoBehaviour
     {
         facingRight = !facingRight;
         spriteRenderer.flipX = !spriteRenderer.flipX;
+    }
+
+    private bool ArrayContainsValue(int[] array, int value)
+    {
+        for (int i = 0; i < array.Length; i++)
+        {
+            if (array[i] == value)
+            {
+                return true;
+            }
+        }
+        return false;
     }
 }
