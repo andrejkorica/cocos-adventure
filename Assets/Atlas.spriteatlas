@@ -56,6 +56,7 @@ SpriteAtlas:
   - {fileID: -1149863176, guid: e7ee3510b9fd79c4596b226d5bf88e39, type: 3}
   - {fileID: 256664315, guid: e7ee3510b9fd79c4596b226d5bf88e39, type: 3}
   - {fileID: -371413177, guid: e7ee3510b9fd79c4596b226d5bf88e39, type: 3}
+  - {fileID: 21300000, guid: f90bc4e0209149d4fa1b2c95367e66b9, type: 3}
   - {fileID: 21300000, guid: 3b32edf04feda2242b882a522b07ae9a, type: 3}
   - {fileID: 21300000, guid: 0ddeb6514aa45104489009dbe1a2f55d, type: 3}
   - {fileID: -1537405829, guid: 4ca0c0858bf8ef546be6ced3422aeb43, type: 3}
@@ -153,6 +154,7 @@ SpriteAtlas:
   - WallLeftSpikes_3
   - WallLeftSpikes_4
   - WallLeftSpikes_5
+  - bolder
   - bigPlatform
   - Key
   - Sprite-0001_1
