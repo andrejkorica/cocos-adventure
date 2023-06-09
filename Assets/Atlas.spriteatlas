@@ -58,7 +58,6 @@ SpriteAtlas:
   - {fileID: -371413177, guid: e7ee3510b9fd79c4596b226d5bf88e39, type: 3}
   - {fileID: 21300000, guid: 3b32edf04feda2242b882a522b07ae9a, type: 3}
   - {fileID: 21300000, guid: 0ddeb6514aa45104489009dbe1a2f55d, type: 3}
-  - {fileID: 21300000, guid: 5de2c752e0b106d4888ed82bea81d326, type: 3}
   - {fileID: -1537405829, guid: 4ca0c0858bf8ef546be6ced3422aeb43, type: 3}
   - {fileID: -57899677, guid: 4ca0c0858bf8ef546be6ced3422aeb43, type: 3}
   - {fileID: 2144494433, guid: 4ca0c0858bf8ef546be6ced3422aeb43, type: 3}
@@ -143,7 +142,9 @@ SpriteAtlas:
   - {fileID: 20733369, guid: a394321dc4567f34d851cffc0cbe979a, type: 3}
   - {fileID: 1771911123, guid: 860a171ecca07314c9ce5f08c4d343e9, type: 3}
   - {fileID: -1224734241, guid: 860a171ecca07314c9ce5f08c4d343e9, type: 3}
+  - {fileID: -704353938, guid: 860a171ecca07314c9ce5f08c4d343e9, type: 3}
   - {fileID: -1184606002, guid: 860a171ecca07314c9ce5f08c4d343e9, type: 3}
+  - {fileID: 144114684, guid: 860a171ecca07314c9ce5f08c4d343e9, type: 3}
   - {fileID: 696360901, guid: 860a171ecca07314c9ce5f08c4d343e9, type: 3}
   - {fileID: -616166840, guid: 860a171ecca07314c9ce5f08c4d343e9, type: 3}
   - {fileID: 1334700234, guid: 860a171ecca07314c9ce5f08c4d343e9, type: 3}
@@ -167,7 +168,6 @@ SpriteAtlas:
   - WallLeftSpikes_5
   - bigPlatform
   - Key
-  - background
   - Sprite-0001_1
   - Sprite-0001_0
   - Sprite-0001_3
@@ -252,7 +252,9 @@ SpriteAtlas:
   - SpikesTop_1
   - backgroundMap_11
   - backgroundMap_10
+  - backgroundMap_13
   - backgroundMap_12
+  - backgroundMap_14
   - backgroundMap_2
   - backgroundMap_3
   - backgroundMap_0

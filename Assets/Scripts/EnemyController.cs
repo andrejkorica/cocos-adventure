@@ -10,6 +10,7 @@ public class EnemyController : MonoBehaviour
     [SerializeField]
     private GameObject[] positions;
 
+
     private int index;
     private Vector3 localPosition;
     private Vector3 globalPosition;
