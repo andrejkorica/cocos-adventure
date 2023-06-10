@@ -7,8 +7,8 @@ public class EnemyController : MonoBehaviour
     [SerializeField]
     private float speed;
 
-    [SerializeField]
-    private GameObject[] positions;
+    
+    public GameObject[] positions;
 
     [SerializeField]
     private int[] flipIndexes;

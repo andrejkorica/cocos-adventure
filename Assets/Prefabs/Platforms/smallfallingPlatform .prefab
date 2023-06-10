@@ -5001,5 +5001,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e41e3e4632396be4a81072ee9fde0037, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fallDelay: 0.2
+  respawnDelay: 3
   particles: {fileID: 4812307940809743623}
   rb: {fileID: 4812307940851115763}
