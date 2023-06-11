@@ -1457,7 +1457,7 @@ MonoBehaviour:
   m_IgnoreTimeScale: 0
   m_WorldUpOverride: {fileID: 0}
   m_UpdateMethod: 1
-  m_BlendUpdateMethod: 1
+  m_BlendUpdateMethod: 0
   m_DefaultBlend:
     m_Style: 1
     m_Time: 2
@@ -78317,11 +78317,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5040407664247567479, guid: c844b0e1d8ade6e44ae83ae5fe1b2a54, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -33.406784
+      value: -33.49
       objectReference: {fileID: 0}
     - target: {fileID: 5040407664247567479, guid: c844b0e1d8ade6e44ae83ae5fe1b2a54, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 27.072727
+      value: 26.77
       objectReference: {fileID: 0}
     - target: {fileID: 5040407664247567479, guid: c844b0e1d8ade6e44ae83ae5fe1b2a54, type: 3}
       propertyPath: m_LocalPosition.z
@@ -78764,7 +78764,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 823650629222e774b93625f7646926ca, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 1
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0

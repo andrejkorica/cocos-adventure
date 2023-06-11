@@ -7,6 +7,7 @@ public class StarScript : MonoBehaviour, IDataPersistence
     private bool isCollected = false;
     private SpriteRenderer spriteRenderer;
 
+
     void Awake() {
         this.spriteRenderer = GetComponent<SpriteRenderer>();
     }
