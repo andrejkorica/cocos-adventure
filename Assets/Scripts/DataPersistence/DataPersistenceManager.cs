@@ -42,16 +42,20 @@ public class DataPersistenceManager : MonoBehaviour
 
     public void OnSceneLoaded(Scene scene, LoadSceneMode mode) 
     {
-        this.dataPersistenceObjects = FindAllDataPersistenceObjects();
-        this.globalDataPersistenceObject = FindObjectsOfType<MonoBehaviour>(true).OfType<IGlobalDataPersistance>().First();
-
-        LoadGame();
+        currentIndex = SceneManager.GetActiveScene().buildIndex;
+        if (FindObjectsOfType<MonoBehaviour>(true).OfType<IGlobalDataPersistance>().Count() > 0) {
+            this.dataPersistenceObjects = FindAllDataPersistenceObjects();
+            this.globalDataPersistenceObject = FindObjectsOfType<MonoBehaviour>(true).OfType<IGlobalDataPersistance>().First();
+            LoadGame();
+        }    
     }
 
     public void LoadGame()
     {
         this.gameData = dataHandler.Load(this.currentIndex);
+        this.globalData = dataHandler.LoadGlobalData();
         CoinCounter.instance.SetCoins(gameData.collectedCoins.Count(c => c));
+
         if (this.gameData == null) 
         {
             this.gameData = new GameData();
@@ -94,11 +98,5 @@ public class DataPersistenceManager : MonoBehaviour
             .OfType<IDataPersistence>();
 
         return new List<IDataPersistence>(dataPersistenceObjects);
-    }
-
-    // TODO mozda ne treba
-    public Dictionary<string, GameData> GetAllProfilesGameData() 
-    {
-        return dataHandler.LoadAllLevels();
     }
 }

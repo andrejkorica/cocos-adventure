@@ -7,6 +7,7 @@ public class MainMenu : MonoBehaviour
 {
     public int FirstLevelIndex = 1;
     public void NewGame() {
+        FileDataHandler.DeleteProgress();
         SceneManager.LoadScene(FirstLevelIndex);
     }
 

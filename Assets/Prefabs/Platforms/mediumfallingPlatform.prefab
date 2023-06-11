@@ -167,6 +167,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e41e3e4632396be4a81072ee9fde0037, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fallDelay: 0.2
+  respawnDelay: 3
   particles: {fileID: 2282701219283519401}
   rb: {fileID: 2282701219191831645}
 --- !u!1 &2282701219283519396

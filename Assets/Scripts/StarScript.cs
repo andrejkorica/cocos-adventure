@@ -7,13 +7,14 @@ public class StarScript : MonoBehaviour, IDataPersistence
     private bool isCollected = false;
     private SpriteRenderer spriteRenderer;
 
+
     void Awake() {
         this.spriteRenderer = GetComponent<SpriteRenderer>();
     }
     
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (!collision.gameObject.CompareTag("Player") && !isCollected)
+        if (collision.gameObject.CompareTag("Player") && !isCollected)
         {
             isCollected = true;
             spriteRenderer.enabled = false;

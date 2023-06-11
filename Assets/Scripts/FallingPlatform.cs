@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class FallingPlatform : MonoBehaviour
 {
-    private float fallDelay = 1f;
-    private float respawnDelay = 1f;
+    public float fallDelay = 1f;
+    public float respawnDelay = 1f;
     private Vector3 startPosition;
+    private bool isFalling = false;
 
     [SerializeField] private ParticleSystem particles;
     [SerializeField] private Rigidbody2D rb;
@@ -18,8 +19,7 @@ public class FallingPlatform : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log(collision.transform.name);
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player") && !isFalling)
         {
             StartCoroutine(Fall());
             particles.Play();
@@ -43,6 +43,7 @@ public class FallingPlatform : MonoBehaviour
         Debug.Log("fall");
         yield return new WaitForSeconds(fallDelay);
         rb.bodyType = RigidbodyType2D.Dynamic;
+        isFalling = true;
         //Destroy(gameObject, destroyDelay);
     }
 
@@ -55,6 +56,7 @@ public class FallingPlatform : MonoBehaviour
         yield return new WaitForSeconds(respawnDelay);
         GetComponent<SpriteRenderer>().enabled = true;
         transform.position = startPosition;
+        isFalling = false;
     }
 
     
