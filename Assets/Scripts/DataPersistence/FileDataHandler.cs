@@ -35,9 +35,10 @@ public class FileDataHandler
             }
         }
 
+        Debug.Log(dataToLoad);
         return JsonUtility.FromJson<GameData>(dataToLoad);    
     }
-    public AttributesData LoadGlobablData(int index) 
+    public AttributesData LoadGlobalData() 
     {
         // Use Path.Combine to account for different OS's having different path separators
         string fullPath = Path.Combine(dataDirPath, globalDirName, dataFileName);
@@ -99,28 +100,13 @@ public class FileDataHandler
         }
     }
 
-    public Dictionary<string, GameData> LoadAllLevels() 
+    public static void DeleteProgress() 
     {
-        Dictionary<string, GameData> profileDictionary = new Dictionary<string, GameData>();
+        var di = new DirectoryInfo(Path.Combine(Application.persistentDataPath));
 
-        // Loop over all directory names in the data directory path
-        IEnumerable<DirectoryInfo> dirInfos = new DirectoryInfo(dataDirPath).EnumerateDirectories();
-        foreach (DirectoryInfo dirInfo in dirInfos) 
+        foreach (DirectoryInfo dir in di.GetDirectories())
         {
-            string index = dirInfo.Name;
-            string fullPath = Path.Combine(dataDirPath, index, dataFileName);
-            if (!File.Exists(fullPath))
-            {
-                continue;
-            }
-
-            GameData profileData = Load(int.Parse(index));
-            if (profileData != null) 
-            {
-                profileDictionary.Add(index, profileData);
-            }
+            dir.Delete(true); 
         }
-
-        return profileDictionary;
     }
 }

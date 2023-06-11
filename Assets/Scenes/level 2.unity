@@ -75970,6 +75970,17 @@ Transform:
   m_Father: {fileID: 899181122}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1528532811 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1664741904, guid: b7b627207b60845418dffdab25f6971c, type: 3}
+  m_PrefabInstance: {fileID: 1453308854}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1538550884
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -78704,9 +78715,9 @@ MonoBehaviour:
   maxHealth: 3
   invulnerabilityDuration: 5
   spawnPoint: {fileID: 2143466288}
-  HeartImage1: {fileID: 0}
-  HeartImage2: {fileID: 0}
-  HeartImage3: {fileID: 0}
+  HeartImage1: {fileID: 528950565}
+  HeartImage2: {fileID: 1528532811}
+  HeartImage3: {fileID: 1314460042}
 --- !u!114 &2147218913
 MonoBehaviour:
   m_ObjectHideFlags: 0
