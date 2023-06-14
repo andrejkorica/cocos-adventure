@@ -26,7 +26,15 @@ public class FallingPlatform : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("Ground") && GetComponent<SpriteRenderer>().enabled)
         {
-            StartCoroutine(Respawn());
+            if(collision.gameObject.GetComponent<FallingPlatform>())
+            {
+                return;
+            }
+            else
+            {
+                StartCoroutine(Respawn());  
+            }
+            
         }
     }
 
