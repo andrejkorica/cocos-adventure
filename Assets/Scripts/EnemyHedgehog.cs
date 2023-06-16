@@ -14,6 +14,7 @@ public class EnemyHedgehog : MonoBehaviour
 
     private int index;
     private bool facingRight = true;
+    private bool movingForward = true; // Dodana nova varijabla za praćenje smjera kretanja
     private SpriteRenderer spriteRenderer;
 
     private void Awake()
@@ -30,31 +31,45 @@ public class EnemyHedgehog : MonoBehaviour
 
         if (Vector2.Distance(transform.position, pos1) < 0.1f)
         {
-            if (index < positions.Length - 1)
+            if (movingForward) // Provjeravamo je li trenutno kretanje naprijed
             {
-                Vector3 direction = positions[index + 1].transform.position - targetPosition;
-                float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-                if (direction.x < 0)
+                if (index < positions.Length - 1)
                 {
-                    angle -= 180f;
+                    Vector3 direction = positions[index + 1].transform.position - targetPosition;
+                    float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+                    if (direction.x < 0)
+                    {
+                        angle -= 180f;
+                    }
+                    transform.rotation = Quaternion.Euler(0, 0, angle);
+                    index++;
                 }
-                transform.rotation = Quaternion.Euler(0, 0, angle);
-                index++;
+                else if (index == positions.Length - 1)
+                {
+                    movingForward = false; // Promjena smjera kretanja
+                }
+                FlipIfNeeded();
             }
-            else if (index == positions.Length - 1)
+            else // Ako je trenutno kretanje unatrag
             {
-                Vector3 direction = positions[0].transform.position - targetPosition;
-                float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-                if (direction.x < 0)
+                if (index > 0)
                 {
-                    angle -= 180f;
+                    Vector3 direction = positions[index - 1].transform.position - targetPosition;
+                    float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+                    if (direction.x < 0)
+                    {
+                        angle -= 180f;
+                    }
+                    transform.rotation = Quaternion.Euler(0, 0, angle);
+                    index--;
                 }
-                transform.rotation = Quaternion.Euler(0, 0, angle);
-                index = 0;
+                else if (index == 0)
+                {
+                    movingForward = true; // Promjena smjera kretanja
+                }
+                FlipIfNeeded();
             }
-
-            FlipIfNeeded();
-        }        
+        }
     }
 
     private void FlipIfNeeded()
