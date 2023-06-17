@@ -14,11 +14,9 @@ public class RockDamage : MonoBehaviour
             {
                 Debug.Log("PlayerHealth script found on the player character.");
                 playerHealth.TakeDamage();
+                playerHealth.UpdateHeartImages();
             }
-            else
-            {
-                Debug.Log("PlayerHealth script not found on the player character.");
-            }
+            
 
         }
     }

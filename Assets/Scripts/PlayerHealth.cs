@@ -29,7 +29,7 @@ public class PlayerHealth : MonoBehaviour, IGlobalDataPersistance
         if (isInvulnerable) {
             return;
         }
-
+       
         Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, 0.5f);
         foreach (Collider2D collider in colliders)
         {
@@ -90,7 +90,7 @@ public class PlayerHealth : MonoBehaviour, IGlobalDataPersistance
         }
     }
 
-    private void UpdateHeartImages()
+    public void UpdateHeartImages()
     {
         // TODO staviti u private polje da se moze spremiti konzerva
         Image[] images = { 

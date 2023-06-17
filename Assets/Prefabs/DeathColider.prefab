@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2006038837540838468}
   - component: {fileID: 8492057637096944414}
   m_Layer: 0
-  m_Name: DieColider
+  m_Name: DeathColider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
