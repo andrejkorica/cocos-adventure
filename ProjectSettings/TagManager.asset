@@ -10,6 +10,7 @@ TagManager:
   - Spike
   - HealthPickup
   - Enemy
+  - ParticleDamage
   layers:
   - Default
   - TransparentFX

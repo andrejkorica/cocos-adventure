@@ -44,7 +44,7 @@ public class PlayerHealth : MonoBehaviour, IGlobalDataPersistance
         }
     }
 
-    private void TakeDamage()
+    public void TakeDamage()
     {
         currentHealth--;
 
@@ -65,7 +65,7 @@ public class PlayerHealth : MonoBehaviour, IGlobalDataPersistance
         isInvulnerable = false;
     }
 
-    private void Die()
+    public void Die()
     {
         transform.position = spawnPoint.position;
         previousHealth = currentHealth;  // Spremi trenutni broj zivota za sljedeci level
