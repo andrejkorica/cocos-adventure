@@ -21,6 +21,10 @@ public class MainMenu : MonoBehaviour
         throw new System.Exception("Continue logic is not implemented yet");
     }
 
+    public void LevelSelect(int levelIndex) {
+        SceneManager.LoadScene(levelIndex);
+    }
+
     public void ExitGame() {
         Application.Quit();
     }

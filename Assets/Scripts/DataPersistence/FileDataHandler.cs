@@ -35,7 +35,6 @@ public class FileDataHandler
             }
         }
 
-        Debug.Log(dataToLoad);
         return JsonUtility.FromJson<GameData>(dataToLoad);    
     }
     public AttributesData LoadGlobalData() 
