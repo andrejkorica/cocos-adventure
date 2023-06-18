@@ -10,9 +10,7 @@ public class CoinCollectScript : MonoBehaviour, IDataPersistence
     private SpriteRenderer spriteRenderer;
 
     void Awake() {
-        CoinCollectScript[] prefabInstances = GameObject.FindObjectsOfType<CoinCollectScript>();
-
-        this.currentIndex = Array.IndexOf(prefabInstances, GetComponent<CoinCollectScript>());
+        this.currentIndex = transform.GetSiblingIndex();
         this.spriteRenderer = GetComponent<SpriteRenderer>();
     }
     
