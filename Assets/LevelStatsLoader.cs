@@ -55,6 +55,10 @@ public class LevelStatsLoader : MonoBehaviour
 
         // Disable the button if level hasnt been passed
         transform.GetChild(0).GetComponent<Button>().interactable = gameData.levelPassed;
+        if (gameData.levelPassed) {
+            MainMenu.LevelsCompleted++;
+            ContinueButtonController.LevelsCompleted++;
+        }
     }
 
     private void SetImageOpacity(Image image, bool full)
