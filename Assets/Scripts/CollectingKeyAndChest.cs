@@ -27,7 +27,6 @@ public class CollectingKeyAndChest : MonoBehaviour
     }
 
     private void goToNextLevel() {
-        // TODO Save
         // TODO Animation
         var dataStorage = DataPersistenceManager.instance;
         dataStorage.SaveGame();

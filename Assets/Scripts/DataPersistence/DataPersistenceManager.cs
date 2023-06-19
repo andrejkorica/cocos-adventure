@@ -81,6 +81,7 @@ public class DataPersistenceManager : MonoBehaviour
             return;
         }
 
+        gameData.levelPassed = true;
         foreach (IDataPersistence dataPersistenceObj in dataPersistenceObjects) 
         {
             dataPersistenceObj.SaveData(gameData);
