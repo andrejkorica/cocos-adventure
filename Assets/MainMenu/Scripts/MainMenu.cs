@@ -8,13 +8,15 @@ public class MainMenu : MonoBehaviour
 {
     public static int LevelsCompleted = 0;
     public int FirstLevelIndex = 1;
-    
+
     public void NewGame() {
         FileDataHandler.DeleteProgress();
         SceneManager.LoadScene(FirstLevelIndex);
     }
 
     public void Continue() {
+        Debug.Log("Continue");
+        Debug.Log("");
         SceneManager.LoadScene(LevelsCompleted < 6 ? LevelsCompleted + 1 : 6);
     }
 

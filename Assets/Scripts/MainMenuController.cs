@@ -33,8 +33,8 @@ public class MainMenuController : MonoBehaviour
     public void Exit() {
         Time.timeScale = 1;
 
+        MainMenu.LevelsCompleted = 0;
         // TODO: Treba unloadat scenu da ne ostane spremljen state
-        SceneManager.UnloadSceneAsync(gameObject.scene.buildIndex);
         SceneManager.LoadScene(MainMenuIndex);
     }
 }

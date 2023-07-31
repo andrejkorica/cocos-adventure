@@ -10,6 +10,9 @@ public class ContinueButtonController : MonoBehaviour
 
     void Start() {
         LevelStatLoaderGameObject.SetActive(true);
+
+        Debug.Log("Set active");
+        // TODO Treba pokrenut manualno start na svakom childu 
     }
     void Update()
     {
