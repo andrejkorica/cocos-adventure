@@ -13,7 +13,7 @@ public class PlayerHealth : MonoBehaviour, IGlobalDataPersistance
     public Image HeartImage2;  
     public Image HeartImage3;
 
-    private int currentHealth;  
+    private static int currentHealth;
     private bool isInvulnerable;  
 
     private static int previousHealth;  // Broj zivota pri prethodnom levelu
@@ -42,6 +42,10 @@ public class PlayerHealth : MonoBehaviour, IGlobalDataPersistance
                 break;
             }
         }
+    }
+
+    public static int GetCurrentHealth() {
+        return currentHealth;
     }
 
     private void TakeDamage()
