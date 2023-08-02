@@ -24,7 +24,7 @@ public class StartDisplay : MonoBehaviour
     private void SetImageOpacity(Image image, bool full)
     {
         Color imageColor = image.color;
-        imageColor.a = full ? 1f : .5f;
+        imageColor.a = full ? 1f : .2f;
         image.color = imageColor;
     }
 }
