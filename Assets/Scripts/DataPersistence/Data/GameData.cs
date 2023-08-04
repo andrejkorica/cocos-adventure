@@ -7,6 +7,8 @@ public class GameData
 {
     public bool[] collectedCoins;
     public bool collectedStar;
+    public int bestTime;
+    public bool levelPassed;
     
     public GameData()
     {
@@ -14,5 +16,8 @@ public class GameData
         
         this.collectedCoins = Enumerable.Repeat(false, coinsCount).ToArray();
         this.collectedStar = false;
+
+        this.bestTime = -1;
+        this.levelPassed = false;
     }
 }
