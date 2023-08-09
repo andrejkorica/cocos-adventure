@@ -53,8 +53,8 @@ MonoBehaviour:
     m_Bits: 64
   SharkTimer: {fileID: 0}
   player: {fileID: 0}
-  startAngle: 0
-  fov: 90
+  startAngle: -35
+  fov: 100
   rayCount: 50
   viewDistance: 50
   attackTime: 3

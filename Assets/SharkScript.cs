@@ -33,14 +33,14 @@ public class SharkScript : MonoBehaviour
     void Update()
     {
         float angle = startAngle;
-        Vector3 origin = Vector3.zero;
+        Vector3 origin = transform.position;
         float angleIncrease = fov / rayCount;
 
         Vector3[] vertices = new Vector3[rayCount + 1 + 1];
         Vector2[] uv = new Vector2[vertices.Length];
         int[] triangles = new int[rayCount * 3];
 
-        vertices[0] = origin;
+        vertices[0] = Vector3.zero;
 
         int vertexIndex = 1;
         int triangleIndex = 0;
@@ -50,10 +50,10 @@ public class SharkScript : MonoBehaviour
 
             if (raycastHit2D.collider == null) {
                 // No hit
-                vertex = origin + GetVectorFromAngle(angle) * viewDistance;
+                vertex = GetVectorFromAngle(angle) * viewDistance;
             } else {
                 // Hit object
-                vertex = raycastHit2D.point;
+                vertex = raycastHit2D.point - (Vector2)origin;
             }
 
             vertices[vertexIndex] = vertex;
