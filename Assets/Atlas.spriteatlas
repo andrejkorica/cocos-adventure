@@ -62,6 +62,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 31d4c571d35969740bf13ec64595f02b, type: 3}
   - {fileID: 75333951, guid: b4bc1d12a7a842e448b309cdf8910c6c, type: 3}
   - {fileID: 1778076737, guid: b4bc1d12a7a842e448b309cdf8910c6c, type: 3}
+  - {fileID: 21300000, guid: 528eaf1389f52ad429fef2c217e88cd3, type: 3}
   - {fileID: -487898788, guid: cf33c6932a2707345803e7334f73e2a0, type: 3}
   - {fileID: 750638846, guid: cf33c6932a2707345803e7334f73e2a0, type: 3}
   - {fileID: 651889648, guid: cf33c6932a2707345803e7334f73e2a0, type: 3}
@@ -142,12 +143,14 @@ SpriteAtlas:
   - {fileID: -971607264, guid: b9fadae7c65f175418fc68eeb7b6486c, type: 3}
   - {fileID: -2092664377, guid: b9fadae7c65f175418fc68eeb7b6486c, type: 3}
   - {fileID: 21300000, guid: 030a92f7f05c9c64bb118013f88abda9, type: 3}
+  - {fileID: 1040779934, guid: d7acc9483643f334c8f88733edd8e3e7, type: 3}
   - {fileID: -200994533, guid: bc5554988ebd6e544867850ec25b70d5, type: 3}
   - {fileID: -824208220, guid: bc5554988ebd6e544867850ec25b70d5, type: 3}
   - {fileID: 1941880805, guid: bc5554988ebd6e544867850ec25b70d5, type: 3}
   - {fileID: 908507500, guid: bc5554988ebd6e544867850ec25b70d5, type: 3}
   - {fileID: -1986224794, guid: bc5554988ebd6e544867850ec25b70d5, type: 3}
   - {fileID: -208966722, guid: bc5554988ebd6e544867850ec25b70d5, type: 3}
+  - {fileID: 1040779934, guid: d19c79988ac81b14b94f9ec15eb4f87a, type: 3}
   - {fileID: -233628586, guid: 9be73499a47996e498adda36fea83658, type: 3}
   - {fileID: -1567284450, guid: 9be73499a47996e498adda36fea83658, type: 3}
   - {fileID: 1330764988, guid: 9be73499a47996e498adda36fea83658, type: 3}
@@ -178,6 +181,7 @@ SpriteAtlas:
   - {fileID: 487506419, guid: a394321dc4567f34d851cffc0cbe979a, type: 3}
   - {fileID: -1313455284, guid: a394321dc4567f34d851cffc0cbe979a, type: 3}
   - {fileID: 20733369, guid: a394321dc4567f34d851cffc0cbe979a, type: 3}
+  - {fileID: 21300000, guid: 4faae02dd0892a742a122000c38acbcc, type: 3}
   - {fileID: 21300000, guid: eb9a329d5d36c154c824df4a6cbc3a99, type: 3}
   - {fileID: 1040779934, guid: a8181e9d5d5de214db253373459333c3, type: 3}
   - {fileID: 1771911123, guid: 860a171ecca07314c9ce5f08c4d343e9, type: 3}
@@ -260,6 +264,7 @@ SpriteAtlas:
   - end
   - with pirate thingy_0
   - with pirate thingy_1
+  - canon
   - ship_background_1
   - ship_background_0
   - ship_background_3
@@ -340,12 +345,14 @@ SpriteAtlas:
   - underwater_tilemap_13
   - underwater_tilemap_12
   - mediumPlatform
+  - chest_0
   - bottomSpikes_4
   - bottomSpikes_5
   - bottomSpikes_2
   - bottomSpikes_3
   - bottomSpikes_0
   - bottomSpikes_1
+  - chest_0
   - seaweed_11
   - seaweed_10
   - seaweed_12
@@ -376,6 +383,7 @@ SpriteAtlas:
   - SpikesTop_3
   - SpikesTop_0
   - SpikesTop_1
+  - cannon back
   - sail hanging
   - chest_0
   - backgroundMap_11
