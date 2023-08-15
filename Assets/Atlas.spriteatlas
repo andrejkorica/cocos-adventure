@@ -63,6 +63,7 @@ SpriteAtlas:
   - {fileID: 75333951, guid: b4bc1d12a7a842e448b309cdf8910c6c, type: 3}
   - {fileID: 1778076737, guid: b4bc1d12a7a842e448b309cdf8910c6c, type: 3}
   - {fileID: 21300000, guid: 528eaf1389f52ad429fef2c217e88cd3, type: 3}
+  - {fileID: 21300000, guid: 3623cf23fd3dbe04c9a5d0a1b4be53d3, type: 3}
   - {fileID: -487898788, guid: cf33c6932a2707345803e7334f73e2a0, type: 3}
   - {fileID: 750638846, guid: cf33c6932a2707345803e7334f73e2a0, type: 3}
   - {fileID: 651889648, guid: cf33c6932a2707345803e7334f73e2a0, type: 3}
@@ -265,6 +266,7 @@ SpriteAtlas:
   - with pirate thingy_0
   - with pirate thingy_1
   - canon
+  - wood pole thing
   - ship_background_1
   - ship_background_0
   - ship_background_3
