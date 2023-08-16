@@ -2,6 +2,7 @@ using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
 using System.Collections;
+using System;
 
 public class CrewController : MonoBehaviour
 {
@@ -19,8 +20,9 @@ public class CrewController : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
         currentPoint = pointB.transform;
-        anim.SetBool("PlayerInRange", false);
+  
     }
 
     void Update()
@@ -52,33 +54,21 @@ public class CrewController : MonoBehaviour
     {
         isAttacking = true;
         anim.SetBool("PlayerInRange", true);
+       
 
-       // float attackAnimationLength = anim.GetCurrentAnimatorStateInfo(0).length;
-        Debug.Log("Attack animation length: " + 2.0f);
+        yield return new WaitForSeconds(1f);
 
-        yield return new WaitForSeconds(2.0f);
 
-        GameObject player = GameObject.FindGameObjectWithTag("Player");
-        Debug.Log("Player object found: " + (player != null));
+        anim.SetBool("PlayerInRange", false);
 
-        if (player != null)
-        {
-            PlayerHealth playerHealth = player.GetComponentInChildren<PlayerHealth>();
-            Debug.Log("PlayerHealth component found: " + (playerHealth != null));
-
-            if (playerHealth != null)
-            {
-                playerHealth.TakeDamage();
-                playerHealth.UpdateHeartImages();
-            }
-        }
+       
 
         // Start cooldown
         inCooldown = true;
         yield return new WaitForSeconds(attackCooldown);
 
         isAttacking = false;
-        //anim.SetBool("PlayerInRange", false);
+        
     }
 
 
@@ -108,8 +98,8 @@ public class CrewController : MonoBehaviour
         {
             rb.velocity = new Vector2(-speed, 0);
         }
-
-        if (Vector2.Distance(transform.position, currentPoint.position) < 0.5f)
+        Debug.Log(MathF.Abs(transform.position.x - currentPoint.position.x));
+        if (MathF.Abs(transform.position.x - currentPoint.position.x) < 0.5f)
         {
             Flip();
             rb.velocity = Vector2.zero;
