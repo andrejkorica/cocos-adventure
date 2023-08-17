@@ -75781,6 +75781,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.36
       objectReference: {fileID: 0}
+    - target: {fileID: 4562254284468369798, guid: b7b627207b60845418dffdab25f6971c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5858119915809031769, guid: b7b627207b60845418dffdab25f6971c, type: 3}
       propertyPath: m_Name
       value: Level GUI Canvas

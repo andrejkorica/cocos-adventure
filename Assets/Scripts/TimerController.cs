@@ -6,7 +6,7 @@ using System;
 
 public class TimerController : MonoBehaviour, IDataPersistence
 {
-    private int seconds = 0;
+    private static int seconds = 0;
     private int bestTime = -1;
 
     // Start is called before the first frame update
@@ -18,7 +18,12 @@ public class TimerController : MonoBehaviour, IDataPersistence
     private void AddSecond() {
         seconds++;
         var timeSpan = TimeSpan.FromSeconds(seconds);
-        gameObject.GetComponent<TextMeshProUGUI>().text =  timeSpan.ToString(@"mm\:ss");
+        gameObject.GetComponent<TextMeshProUGUI>().text = timeSpan.ToString(@"mm\:ss");
+    }
+
+    public static string GetTimeString() {
+        var timeSpan = TimeSpan.FromSeconds(seconds);
+        return timeSpan.ToString(@"mm\:ss");
     }
 
     public void LoadData(GameData data) {

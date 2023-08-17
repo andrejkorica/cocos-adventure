@@ -19,8 +19,9 @@ public class LevelStatsLoader : MonoBehaviour
     public int[] totalCoinsOnLevels;
     public int[] requiredTimesForStar;
 
-    void Start()
+    void Awake()
     {
+        Debug.Log("Start");
         // Set coins and timer requirements for all levels
         this.totalCoinsOnLevels = new int[] { 35, 50, -1, -1, -1, -1 };
         this.requiredTimesForStar = new int[] { 45, 120, -1, -1, -1, -1 };
@@ -56,9 +57,14 @@ public class LevelStatsLoader : MonoBehaviour
         // Disable the button if level hasnt been passed
         transform.GetChild(0).GetComponent<Button>().interactable = gameData.levelPassed;
         if (gameData.levelPassed) {
-            MainMenu.LevelsCompleted++;
+            Invoke("IncLevels", .1f);
             ContinueButtonController.LevelsCompleted++;
         }
+    }
+
+    private void IncLevels() {
+        Debug.Log("Inc scenes");
+        MainMenu.LevelsCompleted++;
     }
 
     private void SetImageOpacity(Image image, bool full)

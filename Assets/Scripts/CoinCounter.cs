@@ -6,7 +6,7 @@ using TMPro;
 public class CoinCounter : MonoBehaviour
 {
     public static CoinCounter instance; 
-    private int CoinCount = 0;
+    private static int CoinCount = 0;
     private TextMeshProUGUI textMeshProUGUI;
 
     void Awake() {
@@ -16,6 +16,10 @@ public class CoinCounter : MonoBehaviour
 
     private void UpdateCoinText() {
         textMeshProUGUI.text = CoinCount.ToString();
+    }
+
+    public static int GetCoinCount() {
+        return CoinCount;
     }
 
     public void AddCoin()
