@@ -28,6 +28,7 @@ public class SharkScript : MonoBehaviour
         mesh = new Mesh();
         GetComponent<MeshFilter>().mesh = mesh;
         GetComponent<MeshCollider>().sharedMesh = mesh;
+        
     }
 
     void Update()
@@ -78,7 +79,10 @@ public class SharkScript : MonoBehaviour
 
             if (isTimerOn && timeDifference.TotalSeconds > attackTime) {
                 // Kill
+                PlayerHealth playerHealth = player.GetComponent<PlayerHealth>();
+                playerHealth.Die();
                 Debug.Log("Kill");
+
             }
 
             // Debug.Log("Player visible");

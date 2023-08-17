@@ -33,7 +33,7 @@ public class PlayerHealth : MonoBehaviour, IGlobalDataPersistance
         Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, 0.5f);
         foreach (Collider2D collider in colliders)
         {
-            if (collider.CompareTag("Spike") || collider.CompareTag("Enemy"))
+            if (collider.CompareTag("Enemy"))
             {
                 Debug.Log(maxHealth);
                 TakeDamage();
@@ -48,7 +48,7 @@ public class PlayerHealth : MonoBehaviour, IGlobalDataPersistance
         return currentHealth;
     }
 
-    private void TakeDamage()
+    public void TakeDamage()
     {
         currentHealth--;
 

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9141853593499219095}
   - component: {fileID: 9141853593499219094}
-  - component: {fileID: -1889130369433127604}
+  - component: {fileID: 9153708696224171805}
   m_Layer: 0
   m_Name: danger
   m_TagString: Untagged
@@ -25,7 +25,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9141853593499219092}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.0520267, y: -1.9417287, z: -0.0518499}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -58,11 +58,11 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -1.2186446, y: -0.79992235}
-      - {x: -1.2579178, y: 0.1798737}
-      - {x: -0.27465057, y: 0.12972546}
-      - {x: -0.12487888, y: -0.8676067}
---- !u!114 &-1889130369433127604
+    - - {x: -1.8377051, y: -0.872753}
+      - {x: -1.8769783, y: -0.27531815}
+      - {x: 15.235741, y: -0.1973238}
+      - {x: 15.238074, y: -0.8865035}
+--- !u!114 &9153708696224171805
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -71,6 +71,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 9141853593499219092}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cb74eeba30bfa24428d1ba06d07d450b, type: 3}
+  m_Script: {fileID: 11500000, guid: c7624ec98565f7e4ab8bbc86a467c564, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
