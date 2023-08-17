@@ -1,5 +1,3 @@
-using System.Runtime.CompilerServices;
-using Unity.VisualScripting;
 using UnityEngine;
 using System.Collections;
 using System;
@@ -11,10 +9,9 @@ public class CrewController : MonoBehaviour
     private Rigidbody2D rb;
     private Transform currentPoint;
     public float speed;
-    public bool ToggleWalk;
-    private bool isAttacking = false;
-    private float attackCooldown = 2.0f;
-    private bool inCooldown = false;
+    [HideInInspector] public bool isAttacking = false;
+    private float attackCooldown = 1.0f;
+    [HideInInspector] public bool inCooldown = false;
     private Animator anim;
 
     private void Start()
@@ -34,23 +31,7 @@ public class CrewController : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("Player") && !isAttacking && !inCooldown)
-        {
-            StartCoroutine(AttackPlayer());
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            inCooldown = false;
-        }
-    }
-
-    private IEnumerator AttackPlayer()
+    public IEnumerator AttackPlayer()
     {
         isAttacking = true;
         anim.SetBool("PlayerInRange", true);
@@ -97,8 +78,8 @@ public class CrewController : MonoBehaviour
         else
         {
             rb.velocity = new Vector2(-speed, 0);
+
         }
-        Debug.Log(MathF.Abs(transform.position.x - currentPoint.position.x));
         if (MathF.Abs(transform.position.x - currentPoint.position.x) < 0.5f)
         {
             Flip();

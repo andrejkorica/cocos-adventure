@@ -10,7 +10,6 @@ public class DealDamage : MonoBehaviour
         if (other.CompareTag("Player") && !CantDealDamage)
         {
             PlayerHealth playerHealth = other.GetComponentInChildren<PlayerHealth>();
-            Debug.Log("PlayerHealth component found: " + (playerHealth != null));
 
             if (playerHealth != null)
             {
