@@ -81,7 +81,7 @@ public class SharkScript : MonoBehaviour
                 // Kill
                 PlayerHealth playerHealth = player.GetComponent<PlayerHealth>();
                 playerHealth.Die();
-                Debug.Log("Kill");
+               // Debug.Log("Kill");
 
             }
 
@@ -121,8 +121,9 @@ public class SharkScript : MonoBehaviour
             return false;
         }
 
-        Debug.Log(hit.collider.name);
+       // Debug.Log(hit.collider.name);
         return false;
+
     }
 
     // Checks if player is in angle range 

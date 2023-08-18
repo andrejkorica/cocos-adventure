@@ -166,6 +166,7 @@ SpriteAtlas:
   - {fileID: -188074763, guid: 9be73499a47996e498adda36fea83658, type: 3}
   - {fileID: 1012187079, guid: 9be73499a47996e498adda36fea83658, type: 3}
   - {fileID: 21300000, guid: c609a5b9c24036e48bace21800f419c4, type: 3}
+  - {fileID: 21300000, guid: ff7b89b9af6dc274c979f1a72e5d3352, type: 3}
   - {fileID: 21300000, guid: 05717cbb994d2c64fb6b98bbbc82621a, type: 3}
   - {fileID: 921163114, guid: f526d62caf960f241a73a9d552d6ee8d, type: 3}
   - {fileID: 200894748, guid: f526d62caf960f241a73a9d552d6ee8d, type: 3}
@@ -369,6 +370,7 @@ SpriteAtlas:
   - seaweed_8
   - seaweed_9
   - sail colapsed
+  - star
   - sail
   - SpikesWallRight_5
   - SpikesWallRight_4
