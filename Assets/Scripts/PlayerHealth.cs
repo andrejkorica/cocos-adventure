@@ -5,31 +5,32 @@ using System.Collections;
 
 public class PlayerHealth : MonoBehaviour, IGlobalDataPersistance
 {
-    public int maxHealth;  
-    public float invulnerabilityDuration = 5f;  
-    public Transform spawnPoint;  
+    public int maxHealth;
+    public float invulnerabilityDuration = 5f;
+    public Transform spawnPoint;
 
-    public Image HeartImage1; 
-    public Image HeartImage2;  
+    public Image HeartImage1;
+    public Image HeartImage2;
     public Image HeartImage3;
 
     private static int currentHealth;
-    private bool isInvulnerable;  
+    private bool isInvulnerable;
 
     private static int previousHealth;  // Broj zivota pri prethodnom levelu
 
     private void Start()
     {
         currentHealth = maxHealth;
-        UpdateHeartImages();  
+        UpdateHeartImages();
     }
 
     private void Update()
     {
-        if (isInvulnerable) {
+        if (isInvulnerable)
+        {
             return;
         }
-       
+
         Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, 0.5f);
         foreach (Collider2D collider in colliders)
         {
@@ -37,14 +38,15 @@ public class PlayerHealth : MonoBehaviour, IGlobalDataPersistance
             {
                 Debug.Log(maxHealth);
                 TakeDamage();
-                // Debug.Log("Trenutni broj života: " + currentHealth);
+                Debug.Log("Trenutni broj života: " + currentHealth);
                 UpdateHeartImages();
                 break;
             }
         }
     }
 
-    public static int GetCurrentHealth() {
+    public static int GetCurrentHealth()
+    {
         return currentHealth;
     }
 
@@ -90,29 +92,32 @@ public class PlayerHealth : MonoBehaviour, IGlobalDataPersistance
             Destroy(collision.gameObject);
 
             //Debug.Log("Trenutni broj života: " + currentHealth);
-            UpdateHeartImages(); 
+            UpdateHeartImages();
         }
     }
 
     public void UpdateHeartImages()
     {
         // TODO staviti u private polje da se moze spremiti konzerva
-        Image[] images = { 
+        Image[] images = {
             HeartImage1,
             HeartImage2,
             HeartImage3,
         };
 
-        for (int i = 0; i < images.Length; i++) {
+        for (int i = 0; i < images.Length; i++)
+        {
             images[i].enabled = i < currentHealth;
         }
     }
 
-    public void LoadData(AttributesData data) {
+    public void LoadData(AttributesData data)
+    {
         maxHealth = data.maxHealth;
     }
 
-    public void SaveData(AttributesData data) {
+    public void SaveData(AttributesData data)
+    {
         data.maxHealth = maxHealth;
     }
 }
