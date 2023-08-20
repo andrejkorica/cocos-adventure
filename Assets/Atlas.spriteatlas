@@ -88,6 +88,7 @@ SpriteAtlas:
   - {fileID: 1767501923, guid: 382fa0b50e29fc34187636ee58a4e6e3, type: 3}
   - {fileID: 1080525266, guid: 382fa0b50e29fc34187636ee58a4e6e3, type: 3}
   - {fileID: 21300000, guid: 51362796f159fcb4ea81f62dd1b6d5fc, type: 3}
+  - {fileID: 21300000, guid: 078f1ca6e848b874aa4bbebe71206f79, type: 3}
   - {fileID: 21300000, guid: 4644f3b6d48d3234fa46d9fa10500f8b, type: 3}
   - {fileID: 21300000, guid: 92ff00c69161eb04f9a123a1b79a2e0d, type: 3}
   - {fileID: 21300000, guid: 3f5956c7757d8164097371451a3b48e2, type: 3}
@@ -292,6 +293,7 @@ SpriteAtlas:
   - Sprite-0002_0
   - Sprite-0002_1
   - jolly
+  - chandalere
   - smallPlatform
   - canvas
   - wood platform big
