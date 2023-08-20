@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class BreakablePlatform : MonoBehaviour
 {
-    public float triggerRange = 2f;
     public float fallForce = 10f;
 
     private bool triggered = false;
@@ -11,30 +10,17 @@ public class BreakablePlatform : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        rb.isKinematic = true;
     }
 
-    private void Update()
+    public void TriggerFall()
     {
         if (!triggered)
         {
-            Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, triggerRange);
-
-            foreach (Collider2D collider in colliders)
-            {
-                if (collider.CompareTag("Player"))
-                {
-                    TriggerPlatform();
-                    break;
-                }
-            }
+            triggered = true;
+            rb.isKinematic = false;
+            rb.AddForce(Vector2.down * fallForce, ForceMode2D.Impulse);
         }
-    }
-
-    private void TriggerPlatform()
-    {
-        triggered = true;
-        rb.isKinematic = false;
-        rb.AddForce(Vector2.down * fallForce, ForceMode2D.Impulse);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
