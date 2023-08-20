@@ -3,8 +3,8 @@ using UnityEngine.SceneManagement;
 
 public class CollectingKeyAndChest : MonoBehaviour
 {
-    private int requiredKeys;
-    private int collectedKeys = 0;
+    public int requiredKeys;
+    public int collectedKeys = 0;
 
     private void Start()
     {
