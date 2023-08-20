@@ -3,35 +3,62 @@ using UnityEngine.SceneManagement;
 
 public class CollectingKeyAndChest : MonoBehaviour
 {
-    private bool hasKey = false; 
+    private int requiredKeys;
+    private int collectedKeys = 0;
+
+    private void Start()
+    {
+        CountKeysInScene();
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Key"))
         {
-            Destroy(collision.gameObject); 
-            hasKey = true; 
+            Destroy(collision.gameObject);
+            collectedKeys++;
             Debug.Log("Picked up key!");
+
+            if (collectedKeys >= requiredKeys)
+            {
+                CheckForChest();
+            }
         }
         else if (collision.gameObject.CompareTag("Chest"))
         {
-            if (hasKey)
+            if (collectedKeys >= requiredKeys)
             {
-                goToNextLevel();
+                OpenChest();
             }
             else
             {
-                Debug.Log("You need to pick up the key first!");
+                Debug.Log("You need to pick up the required number of keys first!");
             }
         }
     }
 
-    private void goToNextLevel() {
-        // TODO Animation
+    private void OpenChest()
+    {
+        // TODO: Animation
         var dataStorage = DataPersistenceManager.instance;
         dataStorage.SaveGame();
-        
+
         int buildIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(buildIndex + 1);
+    }
+
+    private void CountKeysInScene()
+    {
+        GameObject[] keys = GameObject.FindGameObjectsWithTag("Key");
+        requiredKeys = keys.Length;
+    }
+
+    private void CheckForChest()
+    {
+        GameObject chest = GameObject.FindGameObjectWithTag("Chest");
+        if (chest != null)
+        {
+            // Enable the interaction with the chest here (e.g., show a message)
+        }
     }
 }
