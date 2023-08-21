@@ -10,6 +10,8 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
 
     private CharacterController2D Controller;
+    [SerializeField] private Transform groundCheck;
+    [SerializeField] private LayerMask _groundLayer;
 
     public void Start()
     {
@@ -21,13 +23,19 @@ public class PlayerMovement : MonoBehaviour
     {
         horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
 
-        if (Input.GetButtonDown("Jump") && Controller.IsGrounded())
+        if (Input.GetButtonDown("Jump") && Controller.IsGrounded() && IsGrounded())
         {
             Controller.Jump();
         }
 
         Controller.Move(horizontalMove * Time.fixedDeltaTime);
         rb.velocity = Vector2.ClampMagnitude(rb.velocity, maxVelocity);
+
+    }
+
+    private bool IsGrounded()
+    {
+        return Physics2D.OverlapCircle(groundCheck.position, 0.2f, _groundLayer);
     }
 }
 
