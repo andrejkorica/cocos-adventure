@@ -11,6 +11,8 @@ TagManager:
   - HealthPickup
   - Enemy
   - ParticleDamage
+  - Opener
+  - Can
   layers:
   - Default
   - TransparentFX
@@ -21,7 +23,6 @@ TagManager:
   - Ground
   - Enemy
   - Shark FOV
-  - 
   - 
   - 
   - 

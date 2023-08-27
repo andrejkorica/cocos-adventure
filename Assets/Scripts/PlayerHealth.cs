@@ -96,6 +96,13 @@ public class PlayerHealth : MonoBehaviour, IGlobalDataPersistance
         }
     }
 
+    public void IncreaseMaxHealth()
+    {
+        maxHealth++;
+        currentHealth = maxHealth;
+        UpdateHeartImages();
+    }
+
     public void UpdateHeartImages()
     {
         // TODO staviti u private polje da se moze spremiti konzerva
