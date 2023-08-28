@@ -8,10 +8,11 @@ public class StarScript : MonoBehaviour, IDataPersistence
     private SpriteRenderer spriteRenderer;
 
 
-    void Awake() {
+    void Awake()
+    {
         this.spriteRenderer = GetComponent<SpriteRenderer>();
     }
-    
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player") && !isCollected)
@@ -22,14 +23,16 @@ public class StarScript : MonoBehaviour, IDataPersistence
         }
     }
 
-    public void LoadData(GameData data) {
+    public void LoadData(GameData data)
+    {
         this.isCollected = data.collectedStar;
         this.spriteRenderer = GetComponent<SpriteRenderer>();
         this.spriteRenderer.enabled = !this.isCollected;
         StarDisplay.instance.UpdateDisplay(isCollected);
     }
 
-    public void SaveData(GameData data) {
+    public void SaveData(GameData data)
+    {
         data.collectedStar = this.isCollected;
     }
 }

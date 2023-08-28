@@ -12,6 +12,10 @@ public class PlayerHealth : MonoBehaviour, IGlobalDataPersistance
     public Image HeartImage1;
     public Image HeartImage2;
     public Image HeartImage3;
+    public Image HeartImage4;
+    public Image HeartImage5;
+    public Image HeartImage6;
+
 
     private static int currentHealth;
     private bool isInvulnerable;
@@ -22,6 +26,7 @@ public class PlayerHealth : MonoBehaviour, IGlobalDataPersistance
     {
         currentHealth = maxHealth;
         UpdateHeartImages();
+        Debug.Log(maxHealth);
     }
 
     private void Update()
@@ -110,6 +115,9 @@ public class PlayerHealth : MonoBehaviour, IGlobalDataPersistance
             HeartImage1,
             HeartImage2,
             HeartImage3,
+            HeartImage4,
+            HeartImage5,
+            HeartImage6
         };
 
         for (int i = 0; i < images.Length; i++)

@@ -3,6 +3,7 @@ using UnityEngine;
 public class OpenerAndCan : MonoBehaviour
 {
     private bool hasOpener = false;
+
     private int numCans = 0;
     private AttributesData attributesData;
     private PlayerHealth playerHealth;
