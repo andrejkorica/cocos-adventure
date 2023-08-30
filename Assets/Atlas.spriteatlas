@@ -56,8 +56,7 @@ SpriteAtlas:
   - {fileID: -1149863176, guid: e7ee3510b9fd79c4596b226d5bf88e39, type: 3}
   - {fileID: 256664315, guid: e7ee3510b9fd79c4596b226d5bf88e39, type: 3}
   - {fileID: -371413177, guid: e7ee3510b9fd79c4596b226d5bf88e39, type: 3}
-  - {fileID: 1599495034, guid: bb6b0b303fc85c04e9ad987272c3b3ae, type: 3}
-  - {fileID: 1040779934, guid: bb6b0b303fc85c04e9ad987272c3b3ae, type: 3}
+  - {fileID: 21300000, guid: bb6b0b303fc85c04e9ad987272c3b3ae, type: 3}
   - {fileID: 21300000, guid: 2e326a6003c436145a2cca83665f050d, type: 3}
   - {fileID: 21300000, guid: f90bc4e0209149d4fa1b2c95367e66b9, type: 3}
   - {fileID: 21300000, guid: 3b32edf04feda2242b882a522b07ae9a, type: 3}
@@ -73,6 +72,7 @@ SpriteAtlas:
   - {fileID: 1599495034, guid: dbd4a5233c958b74bbf658de2fb99911, type: 3}
   - {fileID: 1040779934, guid: dbd4a5233c958b74bbf658de2fb99911, type: 3}
   - {fileID: 21300000, guid: 3623cf23fd3dbe04c9a5d0a1b4be53d3, type: 3}
+  - {fileID: 21300000, guid: 563e1373744eda1408a07e348e9d2f53, type: 3}
   - {fileID: -487898788, guid: cf33c6932a2707345803e7334f73e2a0, type: 3}
   - {fileID: 750638846, guid: cf33c6932a2707345803e7334f73e2a0, type: 3}
   - {fileID: 651889648, guid: cf33c6932a2707345803e7334f73e2a0, type: 3}
@@ -284,8 +284,7 @@ SpriteAtlas:
   - WallLeftSpikes_3
   - WallLeftSpikes_4
   - WallLeftSpikes_5
-  - chest_1
-  - chest_0
+  - can opener (Layer 1)
   - NOTEBOOK (Layer 1)
   - bolder
   - bigPlatform
@@ -301,6 +300,7 @@ SpriteAtlas:
   - chest_1
   - chest_0
   - wood pole thing
+  - CAN OF TUNA
   - ship_background_1
   - ship_background_0
   - ship_background_3
