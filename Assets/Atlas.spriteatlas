@@ -105,6 +105,10 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 3f5956c7757d8164097371451a3b48e2, type: 3}
   - {fileID: 1599495034, guid: 12cb64e7d3d0e2345878d107c0de8663, type: 3}
   - {fileID: 1040779934, guid: 12cb64e7d3d0e2345878d107c0de8663, type: 3}
+  - {fileID: 2120445039, guid: d37549e7c9b0a2640b919587af25c011, type: 3}
+  - {fileID: 1608564615, guid: d37549e7c9b0a2640b919587af25c011, type: 3}
+  - {fileID: -1421471636, guid: d37549e7c9b0a2640b919587af25c011, type: 3}
+  - {fileID: -1449171073, guid: d37549e7c9b0a2640b919587af25c011, type: 3}
   - {fileID: 1876526457, guid: b9fadae7c65f175418fc68eeb7b6486c, type: 3}
   - {fileID: 1863970268, guid: b9fadae7c65f175418fc68eeb7b6486c, type: 3}
   - {fileID: -413819024, guid: b9fadae7c65f175418fc68eeb7b6486c, type: 3}
@@ -276,6 +280,10 @@ SpriteAtlas:
   - {fileID: 1526049023, guid: ecb954aef006be54bb7e4d275d518edd, type: 3}
   - {fileID: 286351322, guid: ecb954aef006be54bb7e4d275d518edd, type: 3}
   - {fileID: -467259823, guid: ecb954aef006be54bb7e4d275d518edd, type: 3}
+  - {fileID: 1619973816, guid: ef39df1f8b89f1b40979b48087e67271, type: 3}
+  - {fileID: 1480406665, guid: ef39df1f8b89f1b40979b48087e67271, type: 3}
+  - {fileID: 957470990, guid: ef39df1f8b89f1b40979b48087e67271, type: 3}
+  - {fileID: -773893889, guid: ef39df1f8b89f1b40979b48087e67271, type: 3}
   - {fileID: 21300000, guid: ab4a7e3fe09eeae43882231196751b59, type: 3}
   m_PackedSpriteNamesToIndex:
   - WallLeftSpikes_0
@@ -333,6 +341,10 @@ SpriteAtlas:
   - wood platform big
   - chest_1
   - chest_0
+  - lava_0
+  - lava_1
+  - lava_2
+  - lava_3
   - underwater_tilemap_51
   - underwater_tilemap_50
   - underwater_tilemap_48
@@ -504,6 +516,10 @@ SpriteAtlas:
   - bubbles_0
   - bubbles_3
   - bubbles_2
+  - LavaLong_2
+  - LavaLong_3
+  - LavaLong_0
+  - LavaLong_1
   - coin (Layer 1)
   m_RenderDataMap: {}
   m_Tag: Atlas
