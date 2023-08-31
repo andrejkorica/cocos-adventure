@@ -1,22 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using System.Linq;
 
 public class CompassController : MonoBehaviour, IGlobalDataPersistance
 {
-    public bool hasCompass = false;
+    public static bool hasCompass = false;
+    public static Image image = null;
 
-    // Start is called before the first frame update
-    void Start()
+    private Image GetCompassSpriteRendered()
     {
+        return GameObject
+            .FindGameObjectsWithTag("Compass")[0].GetComponent<Image>();
+    }
 
+    void Awake()
+    {
+        if (image == null)
+        {
+            image = GetCompassSpriteRendered();
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!hasCompass)
+        if (hasCompass)
         {
             var scripts = FindObjectsOfType<CoinCollectScript>();
             List<float> distances = new List<float>();
@@ -58,7 +68,15 @@ public class CompassController : MonoBehaviour, IGlobalDataPersistance
 
     public void LoadData(AttributesData data)
     {
+        Debug.Log("Load compass");
+        Debug.Log(data.hasCompass);
         hasCompass = data.hasCompass;
+        if (image == null)
+        {
+            image = GetCompassSpriteRendered();
+        }
+
+        image.enabled = hasCompass;
     }
 
     public void SaveData(AttributesData data)
