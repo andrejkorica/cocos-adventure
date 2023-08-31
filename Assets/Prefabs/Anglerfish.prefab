@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7873884123646935261}
   m_Layer: 0
-  m_Name: EnemyObject(Anglerfish)
+  m_Name: Anglerfish
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25,8 +25,8 @@ Transform:
   m_GameObject: {fileID: 7873884123646935258}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -42.67, y: -11.77, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 7873884124863340944}
   - {fileID: 7873884124540106375}
@@ -140,7 +140,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 500
   m_Sprite: {fileID: 21300000, guid: 7dab0fecb2ffc794b82aafb908927845, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -165,9 +165,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.007813676, y: 0.059434053}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.30190325
+  m_Radius: 0.3413002
 --- !u!114 &7873884124863340946
 MonoBehaviour:
   m_ObjectHideFlags: 0
