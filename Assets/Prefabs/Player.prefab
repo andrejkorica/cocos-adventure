@@ -113,6 +113,7 @@ GameObject:
   - component: {fileID: 1751310050868927469}
   - component: {fileID: 1751310050868927468}
   - component: {fileID: 1751310050868927471}
+  - component: {fileID: 3294115780814223137}
   m_Layer: 3
   m_Name: Coco
   m_TagString: Player
@@ -324,3 +325,18 @@ MonoBehaviour:
   HeartImage1: {fileID: 0}
   HeartImage2: {fileID: 0}
   HeartImage3: {fileID: 0}
+  HeartImage4: {fileID: 0}
+  HeartImage5: {fileID: 0}
+  HeartImage6: {fileID: 0}
+--- !u!114 &3294115780814223137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1751310050868927461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26d5ee324ea909641a8f71ddecddc09a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
