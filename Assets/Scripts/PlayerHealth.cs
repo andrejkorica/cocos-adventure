@@ -22,6 +22,7 @@ public class PlayerHealth : MonoBehaviour, IGlobalDataPersistance
 
     private static int previousHealth;  // Broj zivota pri prethodnom levelu
 
+
     private void Start()
     {
         currentHealth = maxHealth;

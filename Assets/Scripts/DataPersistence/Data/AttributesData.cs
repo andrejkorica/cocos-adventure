@@ -1,15 +1,18 @@
 public class AttributesData
 {
     public int maxHealth;
-    public bool hasSpring;
-    public bool hasCoconut;
-    public bool hasSissors;
+    public bool has1Can;
+    public bool has2Can;
+    public bool has3Can;
 
-    public AttributesData() 
+    public bool hasOpener;
+
+    public AttributesData()
     {
         this.maxHealth = 3;
-        this.hasSpring = false;
-        this.hasCoconut = false;
-        this.hasSissors = false;
+        this.has1Can = false;
+        this.has2Can = false;
+        this.has3Can = false;
+        this.hasOpener = false;
     }
 }
