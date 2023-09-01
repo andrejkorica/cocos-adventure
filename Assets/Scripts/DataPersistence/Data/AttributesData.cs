@@ -7,6 +7,8 @@ public class AttributesData
 
     public bool hasOpener;
 
+    public bool hasCompass;
+
     public AttributesData()
     {
         this.maxHealth = 3;
@@ -14,5 +16,6 @@ public class AttributesData
         this.has2Can = false;
         this.has3Can = false;
         this.hasOpener = false;
+        this.hasCompass = false;
     }
 }
