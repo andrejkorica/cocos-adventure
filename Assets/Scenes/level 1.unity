@@ -16727,6 +16727,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8deec9bafa8e084ab7ece9d0642ca47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hasOpener: 0
+  has1Can: 0
+  has2Can: 0
+  has3Can: 0
+  spriteRenderer: {fileID: 959536924}
 --- !u!1 &959536922
 GameObject:
   m_ObjectHideFlags: 0
@@ -16739,7 +16744,7 @@ GameObject:
   - component: {fileID: 959536924}
   - component: {fileID: 959536925}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Opener
   m_TagString: Opener
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34100,11 +34105,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4244284971379442301, guid: 8fc4a88fb27becd4786422bee7973c65, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.03
+      value: -15.22
       objectReference: {fileID: 0}
     - target: {fileID: 4244284971379442301, guid: 8fc4a88fb27becd4786422bee7973c65, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -12.09
+      value: -2.04
       objectReference: {fileID: 0}
     - target: {fileID: 4244284971379442301, guid: 8fc4a88fb27becd4786422bee7973c65, type: 3}
       propertyPath: m_LocalPosition.z
@@ -68690,11 +68695,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7622164293239995510, guid: 01a969dc5a60fd04f8788a97094a5c6c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 36.12
+      value: -10.6
       objectReference: {fileID: 0}
     - target: {fileID: 7622164293239995510, guid: 01a969dc5a60fd04f8788a97094a5c6c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.26
+      value: 1.9
       objectReference: {fileID: 0}
     - target: {fileID: 7622164293239995510, guid: 01a969dc5a60fd04f8788a97094a5c6c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -69133,6 +69138,10 @@ PrefabInstance:
     - target: {fileID: 1751310049439281437, guid: e84ea21821fe0ca4597c1e926c86e0b8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1751310050868927471, guid: e84ea21821fe0ca4597c1e926c86e0b8, type: 3}
+      propertyPath: maxHealth
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1751310050868927471, guid: e84ea21821fe0ca4597c1e926c86e0b8, type: 3}
       propertyPath: HeartImage1

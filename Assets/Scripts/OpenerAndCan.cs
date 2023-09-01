@@ -1,18 +1,25 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class OpenerAndCan : MonoBehaviour
+public class OpenerAndCan : MonoBehaviour, IGlobalDataPersistance
 {
-    private bool hasOpener = false;
-
-    private int numCans = 0;
+    public bool hasOpener = false;
+    public bool has1Can;
+    public bool has2Can;
+    public bool has3Can;
     private AttributesData attributesData;
     private PlayerHealth playerHealth;
+    public SpriteRenderer spriteRenderer;
 
+    void Awake()
+    {
+        GameObject canOpenerObject = GameObject.FindGameObjectWithTag("Opener");
+        SpriteRenderer canOpenerRenderer = canOpenerObject.GetComponent<SpriteRenderer>();
+    }
     private void Start()
     {
         attributesData = new AttributesData();
         playerHealth = GetComponent<PlayerHealth>();
-        LoadAttributesData();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -20,30 +27,59 @@ public class OpenerAndCan : MonoBehaviour
         if (collision.CompareTag("Opener"))
         {
             hasOpener = true;
-            Destroy(collision.gameObject);
+            spriteRenderer.enabled = false;
         }
         else if (collision.CompareTag("Can") && hasOpener)
         {
-            numCans++;
             playerHealth.IncreaseMaxHealth();
+            CollectCan();
             Destroy(collision.gameObject);
+            //spriterenderer za canove
+            //preko njega gasimo objektet
         }
     }
 
-    private void LoadAttributesData()
+    private void CollectCan()
     {
-        // Učitaj podatke iz attributesData u postojeći playerHealth
-        playerHealth.LoadData(attributesData);
+        int currentLevelIndex = SceneManager.GetActiveScene().buildIndex;
+
+        if (currentLevelIndex == 1 && !has1Can)
+        {
+            has1Can = true;
+        }
+        else if (currentLevelIndex == 3 && !has2Can)
+        {
+            has2Can = true;
+        }
+        else if (currentLevelIndex == 4 && !has3Can)
+        {
+            has3Can = true;
+        }
+        //todo: build index scene (koje je level koji je index)
+        //ako je index == treci level onda pokupi prvi can, itd
+        //stavim ih na true
     }
 
-    private void SaveAttributesData()
+    public void LoadData(AttributesData data) //drugi spriterenderer se pali ako je taj i taj skupljen na tom levelu...samo jedan se koristi po levelu
+                                              //ppomocu ifova znam koji je koji
     {
-        // Sačuvaj podatke iz playerHealth u attributesData
-        playerHealth.SaveData(attributesData);
+        this.has1Can = data.has1Can;
+        this.has2Can = data.has2Can;
+        this.has3Can = data.has3Can;
+        this.hasOpener = data.hasOpener;
+        GameObject canOpenerObject = GameObject.FindGameObjectWithTag("Opener");
+        SpriteRenderer canOpenerRenderer = canOpenerObject.GetComponent<SpriteRenderer>();
+        this.spriteRenderer.enabled = !this.hasOpener;
+        Debug.Log(this.hasOpener);
     }
 
-    private void OnApplicationQuit()
+    public void SaveData(AttributesData data)
     {
-        SaveAttributesData();
+        data.has1Can = has1Can;
+        data.has2Can = has2Can;
+        data.has3Can = has3Can;
+        data.hasOpener = this.hasOpener;
+
     }
+
 }
