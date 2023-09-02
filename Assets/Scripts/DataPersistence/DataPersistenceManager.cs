@@ -11,14 +11,14 @@ public class DataPersistenceManager : MonoBehaviour
     private GameData gameData;
     private AttributesData globalData;
     private List<IDataPersistence> dataPersistenceObjects;
-    private IGlobalDataPersistance globalDataPersistenceObject;
+    private List<IGlobalDataPersistance> globalDataPersistenceObjects;
     private FileDataHandler dataHandler;
 
     public static DataPersistenceManager instance { get; private set; }
 
-    private void Awake() 
+    private void Awake()
     {
-        if (instance != null) 
+        if (instance != null)
         {
             Destroy(this.gameObject);
             return;
@@ -30,24 +30,25 @@ public class DataPersistenceManager : MonoBehaviour
         this.currentIndex = SceneManager.GetActiveScene().buildIndex;
     }
 
-    private void OnEnable() 
+    private void OnEnable()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
-    private void OnDisable() 
+    private void OnDisable()
     {
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
-    public void OnSceneLoaded(Scene scene, LoadSceneMode mode) 
+    public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         currentIndex = SceneManager.GetActiveScene().buildIndex;
-        if (FindObjectsOfType<MonoBehaviour>(true).OfType<IGlobalDataPersistance>().Count() > 0) {
+        if (FindObjectsOfType<MonoBehaviour>(true).OfType<IGlobalDataPersistance>().Count() > 0)
+        {
             this.dataPersistenceObjects = FindAllDataPersistenceObjects();
-            this.globalDataPersistenceObject = FindObjectsOfType<MonoBehaviour>(true).OfType<IGlobalDataPersistance>().First();
+            this.globalDataPersistenceObjects = FindAllGlobalPersistenceObjects();
             LoadGame();
-        }    
+        }
     }
 
     public void LoadGame()
@@ -56,48 +57,62 @@ public class DataPersistenceManager : MonoBehaviour
         this.globalData = dataHandler.LoadGlobalData();
         CoinCounter.instance.SetCoins(gameData.collectedCoins.Count(c => c));
 
-        if (this.gameData == null) 
+        if (this.gameData == null)
         {
             this.gameData = new GameData();
         }
 
-        if (this.globalData == null) 
+        if (this.globalData == null)
         {
             this.globalData = new AttributesData();
         }
 
-        foreach (IDataPersistence dataPersistenceObj in dataPersistenceObjects) 
+        foreach (IDataPersistence dataPersistenceObj in dataPersistenceObjects)
         {
             dataPersistenceObj.LoadData(gameData);
         }
-        globalDataPersistenceObject.LoadData(globalData);
+        foreach (IGlobalDataPersistance globalDataPersistenceObject in globalDataPersistenceObjects)
+        {
+            globalDataPersistenceObject.LoadData(globalData);
+        }
     }
 
     public void SaveGame()
     {
-        if (this.gameData == null) 
+        if (this.gameData == null)
         {
             Debug.LogWarning("No data was found. A New Game needs to be started before data can be saved.");
             return;
         }
 
         gameData.levelPassed = true;
-        foreach (IDataPersistence dataPersistenceObj in dataPersistenceObjects) 
+        foreach (IDataPersistence dataPersistenceObj in dataPersistenceObjects)
         {
             dataPersistenceObj.SaveData(gameData);
         }
-        globalDataPersistenceObject.SaveData(globalData);
+        foreach (IGlobalDataPersistance globalDataPersistenceObject in globalDataPersistenceObjects)
+        {
+            globalDataPersistenceObject.SaveData(globalData);
+        }
 
         dataHandler.Save(gameData, this.currentIndex);
         dataHandler.SaveGlobalData(globalData);
     }
 
-    private List<IDataPersistence> FindAllDataPersistenceObjects() 
+    private List<IDataPersistence> FindAllDataPersistenceObjects()
     {
         // FindObjectsofType takes in an optional boolean to include inactive gameobjects
         IEnumerable<IDataPersistence> dataPersistenceObjects = FindObjectsOfType<MonoBehaviour>(true)
             .OfType<IDataPersistence>();
 
         return new List<IDataPersistence>(dataPersistenceObjects);
+    }
+    private List<IGlobalDataPersistance> FindAllGlobalPersistenceObjects()
+    {
+        // FindObjectsofType takes in an optional boolean to include inactive gameobjects
+        IEnumerable<IGlobalDataPersistance> dataPersistenceObjects = FindObjectsOfType<MonoBehaviour>(true)
+            .OfType<IGlobalDataPersistance>();
+
+        return new List<IGlobalDataPersistance>(dataPersistenceObjects);
     }
 }
