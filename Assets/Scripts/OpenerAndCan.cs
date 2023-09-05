@@ -9,12 +9,17 @@ public class OpenerAndCan : MonoBehaviour, IGlobalDataPersistance
     public bool has3Can;
     private AttributesData attributesData;
     private PlayerHealth playerHealth;
-    public SpriteRenderer spriteRenderer;
+    private SpriteRenderer spriteRenderer;
 
     void Awake()
     {
-        GameObject canOpenerObject = GameObject.FindGameObjectWithTag("Opener");
-        SpriteRenderer canOpenerRenderer = canOpenerObject.GetComponent<SpriteRenderer>();
+        if (GameObject.FindGameObjectWithTag("Opener"))
+        {
+            GameObject canOpenerObject = GameObject.FindGameObjectWithTag("Opener");
+            SpriteRenderer canOpenerRenderer = canOpenerObject.GetComponent<SpriteRenderer>();
+        }
+
+    
     }
     private void Start()
     {
