@@ -64,8 +64,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 31d4c571d35969740bf13ec64595f02b, type: 3}
   - {fileID: 1599495034, guid: 1bc5cfa12859efa47a5c800fc03863c6, type: 3}
   - {fileID: 1040779934, guid: 1bc5cfa12859efa47a5c800fc03863c6, type: 3}
-  - {fileID: 1599495034, guid: b02f680259d8e314f8aeb13ae2c65bac, type: 3}
-  - {fileID: 1040779934, guid: b02f680259d8e314f8aeb13ae2c65bac, type: 3}
+  - {fileID: 21300000, guid: b02f680259d8e314f8aeb13ae2c65bac, type: 3}
   - {fileID: 75333951, guid: b4bc1d12a7a842e448b309cdf8910c6c, type: 3}
   - {fileID: 1778076737, guid: b4bc1d12a7a842e448b309cdf8910c6c, type: 3}
   - {fileID: 21300000, guid: 528eaf1389f52ad429fef2c217e88cd3, type: 3}
@@ -189,7 +188,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: ff7b89b9af6dc274c979f1a72e5d3352, type: 3}
   - {fileID: 1599495034, guid: 4845b9d906e8de04d94ebe38ef9fd4a2, type: 3}
   - {fileID: 1040779934, guid: 4845b9d906e8de04d94ebe38ef9fd4a2, type: 3}
-  - {fileID: 1040779934, guid: ebbe223a6664b504696ed18e42bb6361, type: 3}
+  - {fileID: 21300000, guid: ebbe223a6664b504696ed18e42bb6361, type: 3}
   - {fileID: 1599495034, guid: ae906eba6ce79e14486519a9c943f398, type: 3}
   - {fileID: 1040779934, guid: ae906eba6ce79e14486519a9c943f398, type: 3}
   - {fileID: 1040779934, guid: e3a00b1bb1b05ae4db88578c11866040, type: 3}
@@ -280,6 +279,7 @@ SpriteAtlas:
   - {fileID: 1526049023, guid: ecb954aef006be54bb7e4d275d518edd, type: 3}
   - {fileID: 286351322, guid: ecb954aef006be54bb7e4d275d518edd, type: 3}
   - {fileID: -467259823, guid: ecb954aef006be54bb7e4d275d518edd, type: 3}
+  - {fileID: 21300000, guid: abf1c3ce6f73827428e72e0b6bfd5845, type: 3}
   - {fileID: 1619973816, guid: ef39df1f8b89f1b40979b48087e67271, type: 3}
   - {fileID: 1480406665, guid: ef39df1f8b89f1b40979b48087e67271, type: 3}
   - {fileID: 957470990, guid: ef39df1f8b89f1b40979b48087e67271, type: 3}
@@ -300,8 +300,7 @@ SpriteAtlas:
   - end
   - chest_1
   - chest_0
-  - chest_1
-  - chest_0
+  - compass with thingy (Layer 1)
   - with pirate thingy_0
   - with pirate thingy_1
   - canon
@@ -425,7 +424,7 @@ SpriteAtlas:
   - star
   - chest_1
   - chest_0
-  - chest_0
+  - compass (Layer 1)
   - chest_1
   - chest_0
   - chest_0
@@ -516,6 +515,7 @@ SpriteAtlas:
   - bubbles_0
   - bubbles_3
   - bubbles_2
+  - needle (Layer 1)
   - LavaLong_2
   - LavaLong_3
   - LavaLong_0

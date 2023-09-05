@@ -3,24 +3,25 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Linq;
+using Unity.VisualScripting;
+using UnityEngine.PlayerLoop;
 
 public class CompassController : MonoBehaviour, IGlobalDataPersistance
 {
-    public static bool hasCompass = false;
-    public static Image image = null;
+    public static bool hasCompass;
+    public static Image[] images;
+    private GameObject CompassObject;
 
-    private Image GetCompassSpriteRendered()
-    {
-        return GameObject
-            .FindGameObjectsWithTag("Compass")[0].GetComponent<Image>();
-    }
 
-    void Awake()
-    {
-        if (image == null)
+    void Start()
+    {        
+        CompassObject = GameObject.FindGameObjectWithTag("WholeCompass");
+        images = CompassObject.GetComponentsInChildren<Image>();
+
+        if (CompassObject = GameObject.FindGameObjectWithTag("WholeCompass"))
         {
-            image = GetCompassSpriteRendered();
-        }
+            Debug.Log("NASAO");
+        } else Debug.Log("NISAM");
     }
 
     // Update is called once per frame
@@ -66,21 +67,34 @@ public class CompassController : MonoBehaviour, IGlobalDataPersistance
         ) * (180 / Mathf.PI);
     }
 
+   
+
     public void LoadData(AttributesData data)
     {
         Debug.Log("Load compass");
         Debug.Log(data.hasCompass);
         hasCompass = data.hasCompass;
-        if (image == null)
-        {
-            image = GetCompassSpriteRendered();
-        }
 
-        image.enabled = hasCompass;
+        CompassObject = GameObject.FindGameObjectWithTag("WholeCompass");
+        images = CompassObject.GetComponentsInChildren<Image>();
+
+
+        if (CompassObject = GameObject.FindGameObjectWithTag("WholeCompass"))
+        {
+            Debug.Log("NASAO");
+        }
+        else Debug.Log("NISAM");
+
+        foreach (Image image in images)
+        {
+            if (image != null)
+            {
+                image.enabled = data.hasCompass;
+            }
+        }
     }
 
     public void SaveData(AttributesData data)
     {
-        data.hasCompass = hasCompass;
     }
 }

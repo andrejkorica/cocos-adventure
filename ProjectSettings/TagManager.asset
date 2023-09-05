@@ -13,9 +13,10 @@ TagManager:
   - ParticleDamage
   - Opener
   - Compass
+  - WholeCompass
+  - Can
   - Can1
-  - Can2
-  - Can3
+  - Body
   layers:
   - Default
   - TransparentFX
