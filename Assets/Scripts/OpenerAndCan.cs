@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 using UnityEngine.SceneManagement;
 
 public class OpenerAndCan : MonoBehaviour, IGlobalDataPersistance
@@ -14,6 +15,8 @@ public class OpenerAndCan : MonoBehaviour, IGlobalDataPersistance
     private int currentLevelIndex;
     private SpriteRenderer CanRenderer;
     private BoxCollider2D canCollider;
+    private Light2D canLight;
+    private Light2D openerLight;
 
     void Awake()
     {
@@ -21,7 +24,7 @@ public class OpenerAndCan : MonoBehaviour, IGlobalDataPersistance
         {
             GameObject canOpenerObject = GameObject.FindGameObjectWithTag("Opener");
             OpernerRenderer = canOpenerObject.GetComponent<SpriteRenderer>();
-
+            openerLight = canOpenerObject.GetComponent<Light2D>();
 
         }
 
@@ -31,12 +34,15 @@ public class OpenerAndCan : MonoBehaviour, IGlobalDataPersistance
             GameObject canObject = GameObject.FindGameObjectWithTag("Can");
             CanRenderer = canObject.GetComponent<SpriteRenderer>();
             canCollider = canObject.GetComponent<BoxCollider2D>();
+            canLight = canObject.GetComponent<Light2D>();
 
         }
 
     }
     private void Start()
     {
+
+
         attributesData = new AttributesData();
         playerHealth = GetComponent<PlayerHealth>();
         currentLevelIndex = SceneManager.GetActiveScene().buildIndex;
@@ -49,6 +55,7 @@ public class OpenerAndCan : MonoBehaviour, IGlobalDataPersistance
         {
             hasOpener = true;
             OpernerRenderer.enabled = false;
+            openerLight.enabled = false;
         }
         else if (collision.CompareTag("Can") && hasOpener)
         {
@@ -63,24 +70,27 @@ public class OpenerAndCan : MonoBehaviour, IGlobalDataPersistance
 
         if (currentLevelIndex == 1 && !has1Can)
         {
-            Debug.Log("1");
+            Debug.Log("has1Can");
             has1Can = true;
             CanRenderer.enabled = false;
             canCollider.enabled = false;
+            canLight.enabled = false;
         }
         else if (currentLevelIndex == 2 && !has2Can)
         {
-            Debug.Log("2");
+            Debug.Log("has2Can");
             has2Can = true;
             CanRenderer.enabled = false;
             canCollider.enabled = false;
+            canLight.enabled = false;
         }
         else if (currentLevelIndex == 3 && !has3Can)
         {
-            Debug.Log("3");
+            Debug.Log("has3Can");
             has3Can = true;
             CanRenderer.enabled = false;
             canCollider.enabled = false;
+            canLight.enabled = false;
         }
         //todo: build index scene (koje je level koji je index)
         //ako je index == treci level onda pokupi prvi can, itd
@@ -96,26 +106,31 @@ public class OpenerAndCan : MonoBehaviour, IGlobalDataPersistance
         hasOpener = data.hasOpener;
         currentLevelIndex = SceneManager.GetActiveScene().buildIndex;
 
-        if (hasOpener) { 
-        OpernerRenderer.enabled = false;
+        if (hasOpener)
+        {
+            OpernerRenderer.enabled = false;
+            openerLight.enabled = false;
         }
 
         if (currentLevelIndex == 1 && has1Can)
         {
             CanRenderer.enabled = false;
             canCollider.enabled = false;
-        } 
+            canLight.enabled = false;
+        }
 
         if (currentLevelIndex == 2 && has2Can)
         {
             CanRenderer.enabled = false;
             canCollider.enabled = false;
+            canLight.enabled = false;
         }
 
         if (currentLevelIndex == 3 && has3Can)
         {
             CanRenderer.enabled = false;
             canCollider.enabled = false;
+            canLight.enabled = false;
         }
 
     }
