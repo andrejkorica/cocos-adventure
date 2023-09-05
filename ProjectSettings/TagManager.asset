@@ -12,8 +12,10 @@ TagManager:
   - Enemy
   - ParticleDamage
   - Opener
-  - Can
   - Compass
+  - Can1
+  - Can2
+  - Can3
   layers:
   - Default
   - TransparentFX
