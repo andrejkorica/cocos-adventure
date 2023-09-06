@@ -17,8 +17,10 @@ public class CompassController : MonoBehaviour, IGlobalDataPersistance
     {        
         
         CompassObject = GameObject.FindGameObjectWithTag("WholeCompass");
-        images = CompassObject.GetComponentsInChildren<Image>();
-
+        if (CompassObject != null && CompassObject.activeInHierarchy)
+        {
+            images = CompassObject.GetComponentsInChildren<Image>();
+        }
 
         if (CompassObject = GameObject.FindGameObjectWithTag("WholeCompass"))
         {
@@ -78,10 +80,14 @@ public class CompassController : MonoBehaviour, IGlobalDataPersistance
         hasCompass = data.hasCompass;
 
         CompassObject = GameObject.FindGameObjectWithTag("WholeCompass");
-        images = CompassObject.GetComponentsInChildren<Image>();
+
+        if (CompassObject != null && CompassObject.activeInHierarchy)
+        {
+            images = CompassObject.GetComponentsInChildren<Image>();
+        }
 
 
-        if (CompassObject = GameObject.FindGameObjectWithTag("WholeCompass"))
+        if (CompassObject)
         {
             Debug.Log("NASAO");
         }
