@@ -15,8 +15,10 @@ public class CompassController : MonoBehaviour, IGlobalDataPersistance
 
     void Start()
     {        
+        
         CompassObject = GameObject.FindGameObjectWithTag("WholeCompass");
         images = CompassObject.GetComponentsInChildren<Image>();
+
 
         if (CompassObject = GameObject.FindGameObjectWithTag("WholeCompass"))
         {
