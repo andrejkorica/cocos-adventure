@@ -27,6 +27,9 @@ public class TimerController : MonoBehaviour, IDataPersistence
     }
 
     public void LoadData(GameData data) {
+
+        seconds = 0;
+
         if (data.bestTime > -1) {
             bestTime = data.bestTime;
         }

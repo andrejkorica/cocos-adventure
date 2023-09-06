@@ -117,6 +117,7 @@ GameObject:
   - component: {fileID: 2099282912810562311}
   - component: {fileID: 3235222395588958492}
   - component: {fileID: 3171238493343058735}
+  - component: {fileID: 2163752937811374081}
   m_Layer: 3
   m_Name: Coco
   m_TagString: Player
@@ -182,7 +183,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 260
   m_Sprite: {fileID: 1040779934, guid: 00bf3269c2ebac640abc724eb47f4cd1, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6509434, g: 0.617168, b: 0.617168, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -369,12 +370,12 @@ MonoBehaviour:
   m_ComponentVersion: 1
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.905
+  m_FalloffIntensity: 0.836
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
-  m_ApplyToSortingLayers: e72859b9
+  m_ApplyToSortingLayers: 00000000e72859b9
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -449,3 +450,15 @@ MonoBehaviour:
   has1Can: 0
   has2Can: 0
   has3Can: 0
+--- !u!114 &2163752937811374081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1751310050868927461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26d5ee324ea909641a8f71ddecddc09a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
