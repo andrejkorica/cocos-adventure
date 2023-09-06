@@ -68938,6 +68938,10 @@ PrefabInstance:
       propertyPath: HeartImage6
       value: 
       objectReference: {fileID: 2063917684}
+    - target: {fileID: 1751310050868927471, guid: e84ea21821fe0ca4597c1e926c86e0b8, type: 3}
+      propertyPath: invulnerabilityDuration
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e84ea21821fe0ca4597c1e926c86e0b8, type: 3}
 --- !u!1001 &4429593914290408202

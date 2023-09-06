@@ -9,6 +9,8 @@ public class PlayerHealth : MonoBehaviour, IGlobalDataPersistance
     public float invulnerabilityDuration = 5f;
     public Transform spawnPoint;
 
+    private Animator animator;
+
     public Image HeartImage1;
     public Image HeartImage2;
     public Image HeartImage3;
@@ -28,6 +30,7 @@ public class PlayerHealth : MonoBehaviour, IGlobalDataPersistance
         currentHealth = maxHealth;
         UpdateHeartImages();
         Debug.Log(maxHealth);
+        animator = GetComponent<Animator>();
     }
 
     private void Update()
@@ -72,6 +75,7 @@ public class PlayerHealth : MonoBehaviour, IGlobalDataPersistance
 
     private IEnumerator InvulnerabilityCoroutine()
     {
+        animator.SetTrigger("takingdmg");
         isInvulnerable = true;
         yield return new WaitForSeconds(invulnerabilityDuration);
         isInvulnerable = false;
