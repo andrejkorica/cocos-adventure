@@ -116,6 +116,7 @@ GameObject:
   - component: {fileID: 3294115780814223137}
   - component: {fileID: 2099282912810562311}
   - component: {fileID: 3235222395588958492}
+  - component: {fileID: 3171238493343058735}
   m_Layer: 3
   m_Name: Coco
   m_TagString: Player
@@ -274,7 +275,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5b84719acadfab4d8eb03e2685645b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  requiredKeys: 0
   collectedKeys: 0
 --- !u!95 &1751310050868927469
 Animator:
@@ -433,3 +433,19 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!114 &3171238493343058735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1751310050868927461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8deec9bafa8e084ab7ece9d0642ca47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hasOpener: 0
+  has1Can: 0
+  has2Can: 0
+  has3Can: 0

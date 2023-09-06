@@ -56,6 +56,7 @@ public class OpenerAndCan : MonoBehaviour, IGlobalDataPersistance
             hasOpener = true;
             OpernerRenderer.enabled = false;
             openerLight.enabled = false;
+            Debug.Log("COLISON");
         }
         else if (collision.CompareTag("Can") && hasOpener)
         {
@@ -67,6 +68,7 @@ public class OpenerAndCan : MonoBehaviour, IGlobalDataPersistance
 
     private void CollectCan()
     {
+        currentLevelIndex = SceneManager.GetActiveScene().buildIndex;
 
         if (currentLevelIndex == 2 && !has1Can)
         {
@@ -106,7 +108,7 @@ public class OpenerAndCan : MonoBehaviour, IGlobalDataPersistance
         hasOpener = data.hasOpener;
         currentLevelIndex = SceneManager.GetActiveScene().buildIndex;
 
-        if (hasOpener)
+        if (currentLevelIndex == 3 && hasOpener)
         {
             OpernerRenderer.enabled = false;
             openerLight.enabled = false;

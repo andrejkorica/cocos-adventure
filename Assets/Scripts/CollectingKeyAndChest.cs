@@ -44,6 +44,7 @@ public class CollectingKeyAndChest : MonoBehaviour
         dataStorage.SaveGame();
 
         int buildIndex = SceneManager.GetActiveScene().buildIndex;
+        Debug.Log(buildIndex + 1);
         SceneManager.LoadScene(buildIndex + 1);
     }
 
