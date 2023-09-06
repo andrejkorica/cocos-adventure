@@ -68,7 +68,7 @@ public class OpenerAndCan : MonoBehaviour, IGlobalDataPersistance
     private void CollectCan()
     {
 
-        if (currentLevelIndex == 1 && !has1Can)
+        if (currentLevelIndex == 2 && !has1Can)
         {
             Debug.Log("has1Can");
             has1Can = true;
@@ -76,7 +76,7 @@ public class OpenerAndCan : MonoBehaviour, IGlobalDataPersistance
             canCollider.enabled = false;
             canLight.enabled = false;
         }
-        else if (currentLevelIndex == 2 && !has2Can)
+        else if (currentLevelIndex == 3 && !has2Can)
         {
             Debug.Log("has2Can");
             has2Can = true;
@@ -84,7 +84,7 @@ public class OpenerAndCan : MonoBehaviour, IGlobalDataPersistance
             canCollider.enabled = false;
             canLight.enabled = false;
         }
-        else if (currentLevelIndex == 3 && !has3Can)
+        else if (currentLevelIndex == 5 && !has3Can)
         {
             Debug.Log("has3Can");
             has3Can = true;
@@ -112,21 +112,21 @@ public class OpenerAndCan : MonoBehaviour, IGlobalDataPersistance
             openerLight.enabled = false;
         }
 
-        if (currentLevelIndex == 1 && has1Can)
+        if (currentLevelIndex == 2 && has1Can)
         {
             CanRenderer.enabled = false;
             canCollider.enabled = false;
             canLight.enabled = false;
         }
 
-        if (currentLevelIndex == 2 && has2Can)
+        if (currentLevelIndex == 3 && has2Can)
         {
             CanRenderer.enabled = false;
             canCollider.enabled = false;
             canLight.enabled = false;
         }
 
-        if (currentLevelIndex == 3 && has3Can)
+        if (currentLevelIndex == 5 && has3Can)
         {
             CanRenderer.enabled = false;
             canCollider.enabled = false;

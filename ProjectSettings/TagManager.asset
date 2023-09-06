@@ -17,6 +17,9 @@ TagManager:
   - Can
   - Can1
   - Body
+  - Can3
+  - Can2
+  - Coin
   layers:
   - Default
   - TransparentFX
