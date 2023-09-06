@@ -5,11 +5,11 @@ using UnityEngine;
 
 public class RisingLava : MonoBehaviour
 {
-    public bool IsRising = false;
+    public static bool IsRising = false;
     public float speed = 0.001f;
     void Start()
     {
-        
+        IsRising = false;
     }
 
     // Update is called once per frame
