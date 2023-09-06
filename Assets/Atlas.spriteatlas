@@ -87,6 +87,14 @@ SpriteAtlas:
   - {fileID: -1415106160, guid: cf33c6932a2707345803e7334f73e2a0, type: 3}
   - {fileID: -307359136, guid: cf33c6932a2707345803e7334f73e2a0, type: 3}
   - {fileID: 1865236283, guid: cf33c6932a2707345803e7334f73e2a0, type: 3}
+  - {fileID: 609260859, guid: aae40a141cfddeb42816336f8c51463a, type: 3}
+  - {fileID: 286653692, guid: aae40a141cfddeb42816336f8c51463a, type: 3}
+  - {fileID: -509388552, guid: aae40a141cfddeb42816336f8c51463a, type: 3}
+  - {fileID: 129829066, guid: aae40a141cfddeb42816336f8c51463a, type: 3}
+  - {fileID: 1262605978, guid: aae40a141cfddeb42816336f8c51463a, type: 3}
+  - {fileID: -1124352858, guid: aae40a141cfddeb42816336f8c51463a, type: 3}
+  - {fileID: 1959964432, guid: aae40a141cfddeb42816336f8c51463a, type: 3}
+  - {fileID: -1234320355, guid: aae40a141cfddeb42816336f8c51463a, type: 3}
   - {fileID: -1537405829, guid: 4ca0c0858bf8ef546be6ced3422aeb43, type: 3}
   - {fileID: -57899677, guid: 4ca0c0858bf8ef546be6ced3422aeb43, type: 3}
   - {fileID: 2144494433, guid: 4ca0c0858bf8ef546be6ced3422aeb43, type: 3}
@@ -323,6 +331,14 @@ SpriteAtlas:
   - ship_background_12
   - ship_background_13
   - ship_background_14
+  - Portal grayscale_1
+  - Portal grayscale_0
+  - Portal grayscale_3
+  - Portal grayscale_2
+  - Portal grayscale_5
+  - Portal grayscale_4
+  - Portal grayscale_7
+  - Portal grayscale_6
   - Sprite-0001_1
   - Sprite-0001_0
   - Sprite-0001_3
