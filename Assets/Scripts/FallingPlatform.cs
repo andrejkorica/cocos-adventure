@@ -43,6 +43,32 @@ public class FallingPlatform : MonoBehaviour
             }
         }
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player") && !isFalling)
+        {
+            // Check if the player is above the object
+            float playerY = collision.gameObject.transform.position.y;
+            float objectY = transform.position.y;
+
+            if (playerY > objectY)
+            {
+                StartCoroutine(Fall());
+                particles.Play();
+            }
+        }
+        else if (collision.gameObject.CompareTag("Current") && GetComponent<SpriteRenderer>().enabled)
+        {
+            if (collision.gameObject.GetComponent<FallingPlatform>())
+            {
+                return;
+            }
+            else
+            {
+                StartCoroutine(Respawn());
+            }
+        }
+    }
 
     private void OnColisionExit2D(Collision2D collision)
     {
