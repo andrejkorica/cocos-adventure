@@ -14,7 +14,7 @@ public class PassThrewPlatform : MonoBehaviour
 
     private void Update()
     {
-        if (_playerOnPlatform && Input.GetKey(KeyCode.S))
+        if (_playerOnPlatform && Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
         {
             _collider.enabled = false;
             StartCoroutine(EnableCollider());

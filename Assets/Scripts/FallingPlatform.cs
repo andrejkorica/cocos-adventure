@@ -21,20 +21,26 @@ public class FallingPlatform : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player") && !isFalling)
         {
-            StartCoroutine(Fall());
-            particles.Play();
+            // Check if the player is above the object
+            float playerY = collision.gameObject.transform.position.y;
+            float objectY = transform.position.y;
+
+            if (playerY > objectY)
+            {
+                StartCoroutine(Fall());
+                particles.Play();
+            }
         }
-        if (collision.gameObject.CompareTag("Ground") && GetComponent<SpriteRenderer>().enabled)
+        else if (collision.gameObject.CompareTag("Ground") && GetComponent<SpriteRenderer>().enabled)
         {
-            if(collision.gameObject.GetComponent<FallingPlatform>())
+            if (collision.gameObject.GetComponent<FallingPlatform>())
             {
                 return;
             }
             else
             {
-                StartCoroutine(Respawn());  
+                StartCoroutine(Respawn());
             }
-            
         }
     }
 

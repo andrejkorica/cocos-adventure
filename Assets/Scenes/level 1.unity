@@ -66572,7 +66572,7 @@ GameObject:
   - component: {fileID: 1951796013}
   - component: {fileID: 1951796012}
   - component: {fileID: 1951796011}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: bouble column
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68536,6 +68536,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1751310049439281437, guid: e84ea21821fe0ca4597c1e926c86e0b8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1751310050773822522, guid: e84ea21821fe0ca4597c1e926c86e0b8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1751310050868927457, guid: e84ea21821fe0ca4597c1e926c86e0b8, type: 3}
+      propertyPath: m_Mass
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1751310050868927457, guid: e84ea21821fe0ca4597c1e926c86e0b8, type: 3}
+      propertyPath: m_LinearDrag
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1751310050868927457, guid: e84ea21821fe0ca4597c1e926c86e0b8, type: 3}
+      propertyPath: m_UseAutoMass
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1751310050868927471, guid: e84ea21821fe0ca4597c1e926c86e0b8, type: 3}

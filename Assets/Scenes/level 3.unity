@@ -62048,9 +62048,9 @@ GameObject:
   - component: {fileID: 814129560}
   - component: {fileID: 814129559}
   - component: {fileID: 814129558}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: bouble column
-  m_TagString: Spike
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -66231,6 +66231,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.36
       objectReference: {fileID: 0}
+    - target: {fileID: 5041150076832824719, guid: b7b627207b60845418dffdab25f6971c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5858119915809031769, guid: b7b627207b60845418dffdab25f6971c, type: 3}
       propertyPath: m_Name
       value: Level GUI Canvas
@@ -66318,6 +66322,14 @@ PrefabInstance:
     - target: {fileID: 5858119915809031782, guid: b7b627207b60845418dffdab25f6971c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6295883558980234973, guid: b7b627207b60845418dffdab25f6971c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6949189571619095852, guid: b7b627207b60845418dffdab25f6971c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7b627207b60845418dffdab25f6971c, type: 3}
