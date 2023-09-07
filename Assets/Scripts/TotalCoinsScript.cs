@@ -10,7 +10,7 @@ public class TotalCoinsScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        var totalCoinsOnLevels = new int[] { 35, 50, 51, 147, 69, 100 };
+        var totalCoinsOnLevels = new int[] { 34, 64, 51, 130, 69, 100 };
         var currentIndex = SceneManager.GetActiveScene().buildIndex - 1;
         gameObject.GetComponent<TextMeshProUGUI>().text = totalCoinsOnLevels[currentIndex].ToString();
     }
