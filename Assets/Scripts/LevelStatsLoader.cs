@@ -24,7 +24,7 @@ public class LevelStatsLoader : MonoBehaviour
         Debug.Log("Start");
         // Set coins and timer requirements for all levels
         this.totalCoinsOnLevels = new int[] { 34, 64, 51, 130, 69, 100 };
-        this.requiredTimesForStar = new int[] { 45, 160, 140, 180, 200, 190 };
+        this.requiredTimesForStar = new int[] { 45, 160, 140, 180, 200, 120 };
 
         // Load the stats from the specific level
         this.dataHandler = new FileDataHandler(Application.persistentDataPath, fileName);
